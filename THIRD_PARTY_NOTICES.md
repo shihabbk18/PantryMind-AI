@@ -24,3 +24,13 @@ Four Unsplash photographs are bundled under the [Unsplash License](https://unspl
 Download URLs are recorded in web/data/photo-credits.json. These are serving suggestions, not evidence of ingredients or calculated nutrition.
 
 Application code, icons, and original recipe templates use the root MIT LICENSE.
+
+## Local image-recognition runtime
+
+- [Transformers.js 3.8.1](https://github.com/huggingface/transformers.js/tree/3.8.1): Apache-2.0, full license in web/vendor/TRANSFORMERS-LICENSE.
+- ONNX Runtime Web 1.22.0-dev.20250409-89f8206ba4: MIT, full license in web/vendor/ONNX-LICENSE. The matching JS/WASM binaries are bundled.
+- [Swin Food-101 ONNX model](https://huggingface.co/onnx-community/swin-finetuned-food101-ONNX): Apache-2.0, derived from aspis/swin-finetuned-food101. Model revision pinned to e5e50bfc6425aa546f3b4421ca8bd79d0dd610b8; q8 weights are downloaded directly by the browser and cached, not committed to this repository. No hosted inference is used. Model publisher benchmarks are not validation of this application or its serving assumptions.
+
+Ingredient/portion heuristics and recipe assumptions are original project code/data and are not measurements produced by the classifier.
+
+The burger photograph visible in the documentation screenshot is [Unsplash photo-1568901346375-23c9450c58cd](https://images.unsplash.com/photo-1568901346375-23c9450c58cd), also under the Unsplash License. It was used as an actual recognition test image.

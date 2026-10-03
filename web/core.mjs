@@ -27,11 +27,7 @@ export function rankRecipes(recipes, pantry, foods, {preference='any',minKcal=nu
   const validBound=v => v==null || Number.isFinite(v) && v>=0;
   if (!validBound(minKcal) || !validBound(maxKcal) || minKcal!=null && maxKcal!=null && minKcal>maxKcal) throw new Error('Use a valid calorie range: minimum must be no greater than maximum.');
   if (!['any','vegetarian','vegan'].includes(preference)) throw new Error('Unknown dietary preference.');
-  const inventory=new Map();
-  for (const item of pantry) {
-    if (!foods.has(item.food) || !Number.isFinite(item.grams) || item.grams<=0) throw new Error('A saved pantry quantity is invalid. Please edit it.');
-    inventory.set(item.food,(inventory.get(item.food)||0)+item.grams);
-  }
+  const inventory=pantryInventory(pantry,foods);
   if (!inventory.size) return [];
   const results=[];
   for (const recipe of recipes) {
@@ -47,9 +43,32 @@ export function rankRecipes(recipes, pantry, foods, {preference='any',minKcal=nu
       if(available<grams) missing.push({food,grams:grams-available,available,required:grams});
     }
     coverage/=required.size;
-    if(coverage>0) results.push({recipe,macros,coverage,missing});
+    if(coverage>0) results.push({recipe,macros,coverage,missing,namesOnly:pantry.some(p=>p.grams==null)});
   }
   return results.sort((a,b)=>b.coverage-a.coverage || a.missing.length-b.missing.length || a.recipe.minutes-b.recipe.minutes || a.recipe.id.localeCompare(b.recipe.id)).slice(0,limit);
+}
+export function pantryInventory(pantry,foods) {
+  const inventory=new Map();
+  for (const item of pantry) {
+    if (!foods.has(item.food) || item.grams!=null && (!Number.isFinite(item.grams) || item.grams<=0)) throw new Error('A saved pantry quantity is invalid. Please edit it.');
+    // Names-only stock means presence is known, but amount is not measured.
+    inventory.set(item.food,item.grams==null?Infinity:(inventory.get(item.food)||0)+item.grams);
+    // Names-only raw ingredients can be cooked for a recipe; no mass conversion is asserted.
+    if(item.grams==null){const cooked={chicken_raw:'chicken_cooked',rice_dry:'rice_cooked',pasta_dry:'pasta_cooked'}[item.food];if(cooked)inventory.set(cooked,Infinity);}
+  }
+  return inventory;
+}
+const foodAliases={potato:'potato',potatoes:'potato',egg:'egg',eggs:'egg',onions:'onion',onion:'onion',oil:'olive_oil',olive_oil:'olive_oil',chicken:'chicken_raw',chicken_breast:'chicken_raw',rice:'rice_cooked',cooked_rice:'rice_cooked',dry_rice:'rice_dry',pasta:'pasta_cooked',tomatoes:'tomato',cheese:'cheddar',beef:'beef',beans:'kidney_beans',lentils:'lentils',chickpeas:'chickpeas',peas:'peas',spinach:'spinach',bread:'bread',milk:'milk',garlic:'garlic',pepper:'pepper',bell_pepper:'pepper',mushrooms:'mushroom',oats:'oats',yoghurt:'yogurt'};
+export function resolveIngredient(name,foods) {
+ const text=String(name).toLowerCase().trim(),key=text.replace(/[ -]+/g,'_');
+ return foods.get(foodAliases[key]||key)||[...foods.values()].find(f=>f.name.toLowerCase()===text);
+}
+export function parseIngredientNames(text,foods) {
+ const names=String(text).split(/[,;\n]+/).map(s=>s.trim()).filter(Boolean);
+ if(!names.length)throw new Error('Enter at least one ingredient name.');
+ const resolved=names.map(name=>({name,food:resolveIngredient(name,foods)})),unknown=resolved.filter(p=>!p.food);
+ if(unknown.length)throw new Error(`No nutrition data for: ${unknown.map(p=>p.name).join(', ')}. Choose a supported ingredient; other names have not been saved.`);
+ return [...new Map(resolved.map(p=>[p.food.id,{id:p.food.id,food:p.food.id,grams:null}])).values()];
 }
 export function parsePantryQuantity(food, quantity, unit='g') {
   const q=Number(quantity);

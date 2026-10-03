@@ -86,7 +86,7 @@
     ],
     "steps": [
       "Cut the chicken into bite-size pieces. Chop the vegetables.",
-      "Heat the oil and cook the chicken with garlic until it reaches 74°C / 165°F internally.",
+      "Heat the oil and cook the chicken with garlic until it reaches 74\u00b0C / 165\u00b0F internally.",
       "Add the broccoli and carrot with a splash of water and cook until tender.",
       "Reheat the cooked rice until piping hot. Divide into bowls and top with chicken, vegetables, and lemon juice."
     ]
@@ -127,7 +127,7 @@
     "steps": [
       "Boil the pasta in water according to its package directions.",
       "Chop tomatoes and onion. Gently cook the onion and garlic in olive oil.",
-      "Add the tomatoes and simmer for 12–15 minutes, stirring occasionally.",
+      "Add the tomatoes and simmer for 12\u201315 minutes, stirring occasionally.",
       "Drain the pasta, saving a little cooking water. Toss with the sauce, loosening with cooking water if needed."
     ]
   },
@@ -252,8 +252,8 @@
       }
     ],
     "steps": [
-      "Heat the oven to 200°C / 390°F. Chop the vegetables.",
-      "Toss the vegetables with olive oil and roast for 20–25 minutes until tender.",
+      "Heat the oven to 200\u00b0C / 390\u00b0F. Chop the vegetables.",
+      "Toss the vegetables with olive oil and roast for 20\u201325 minutes until tender.",
       "Warm the cooked lentils with a splash of water.",
       "Combine lentils and vegetables. Finish with lemon juice and divide between two bowls."
     ]
@@ -330,7 +330,7 @@
       }
     ],
     "steps": [
-      "Dice the potatoes and onion. Parboil potatoes for 5–7 minutes, then drain.",
+      "Dice the potatoes and onion. Parboil potatoes for 5\u20137 minutes, then drain.",
       "Heat olive oil in a skillet and fry the potato and onion until golden and tender.",
       "Add chopped tomatoes and cook for a few minutes.",
       "Make small wells and add eggs. Cover and cook until whites and yolks are fully set."
@@ -502,6 +502,78 @@
       "Mash avocado with lemon juice.",
       "Heat olive oil and cook the egg until the white and yolk are fully set.",
       "Spread avocado on toast and top with the egg. Add any extras to your nutrition log."
+    ]
+  },
+  {
+    "id": "spanish-omelette",
+    "name": "Spanish-style potato omelette",
+    "description": "Tender potatoes and onion folded into a simple egg omelette.",
+    "image": "breakfast",
+    "minutes": 25,
+    "servings": 2,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "potato",
+        "grams": 300
+      },
+      {
+        "food": "egg",
+        "grams": 200
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Thinly slice potato and onion. Cook in oil over medium-low heat until the potato is tender.",
+      "Beat the eggs, combine with the vegetables, and return to the pan.",
+      "Cook gently until the eggs are fully set, flipping carefully or finishing under a grill. Divide into two servings."
+    ]
+  },
+  {
+    "id": "potato-egg-curry",
+    "name": "Quick potato & egg tomato stew",
+    "description": "A warm one-pan potato and egg meal; add curry spices if you have them.",
+    "image": "rice",
+    "minutes": 25,
+    "servings": 2,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "potato",
+        "grams": 300
+      },
+      {
+        "food": "egg",
+        "grams": 200
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "tomato",
+        "grams": 180
+      }
+    ],
+    "steps": [
+      "Dice potatoes and onion. Soften onion in oil, then add tomatoes and potato.",
+      "Add a splash of water, cover, and simmer until the potatoes are tender. Optional curry spices are not included in the nutrition estimate.",
+      "Crack in the eggs, cover, and cook until whites and yolks are fully set. Divide into two servings."
     ]
   }
 ]

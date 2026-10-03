@@ -4,26 +4,26 @@
 
 **[Open the live website](https://shihabbk18.github.io/PantryMind-AI/)** · [Validation record](VALIDATION.md) · [Data and image licenses](THIRD_PARTY_NOTICES.md)
 
-![Verified live PantryMind website](docs/website.png)
+![PantryMind automatic photo estimate](docs/website.png)
 
 ## Features
 
 - Select a meal photograph or use a supported mobile browser's camera picker. Photos stay on your device.
-- Confirm ingredients and quantities manually, add/remove rows, and calculate calories, protein, carbohydrates, and fat.
-- Optional recipe templates suggest ingredients, leaving quantities blank until you confirm them.
-- Add, edit, and delete pantry ingredients using grams or explicitly approximate egg piece quantities.
+- Upload a food photo: a Food-101 model predicts the probable dish on-device, maps it to likely ingredients with standard serving weights, and calculates initial calories/macros automatically. No recipe dropdown or mandatory edits. Optional edits and serving-size changes recalculate deterministically.
+- Optional free-text dish correction and manual ingredient entry remain available if the guess is wrong or unsupported.
+- Enter comma-separated ingredient names such as `potato, egg, onion, olive oil`. Quantities are optional. Get pictured ideas, quick steps, and calculated nutrition using standard recipe weights.
 - Get up to three quantity-aware recipe matches with dietary/calorie preferences, cooking instructions, and explicit shortages.
 - Save favorites, pantry items, and meal nutrition summaries in My Kitchen using IndexedDB.
 - Use core features offline after the first successful visit: the service worker caches application files, recipes, catalog, and photographs.
 
-**Recognition limitation:** this release uses manual photo confirmation. It does not classify images, identify food automatically, infer portions, or generate AI images. Recommendations use a transparent matching algorithm. Bundled photographs are licensed serving suggestions and may not depict the exact recipe.
+**Recognition assumptions:** a pinned, free Swin Food-101 classifier runs in a Web Worker using Transformers.js and WASM. First use downloads approximately 93 MB of weights from Hugging Face; no image is uploaded or sent to hosted inference. Supported predicted dishes use authored ingredient/serving heuristics (29 templates), not exact ingredient detection or measured portion mass. Unsupported or low-scoring guesses show an error and retain manual entry. The classifier predicts one dominant dish and cannot reliably reject non-food photos or separate a mixed meal. Model scores are not calibrated probabilities. All nutrition is computed from USDA records. Bundled photographs remain licensed serving suggestions, not newly AI-generated images.
 
 ## Try it
 
 1. Open the live website and wait for **Offline ready** before using it without connectivity.
-2. Optionally choose a meal photo. Select **Rice, cooked**, enter **200 g**, and calculate: **260 kcal, 5.38 g protein, 56.34 g carbohydrates, 0.56 g fat** before display rounding.
+2. Choose a burger/pizza/food photo and wait for automatic recognition and initial nutrition. Optional edits correct the assumed ingredients and serving size. For a deterministic arithmetic check, manually enter **Rice, cooked, 200 g**: **260 kcal, 5.38 g protein, 56.34 g carbs, 0.56 g fat** before rounding.
 3. Give the meal a name and save it.
-4. Add pantry ingredients, select **What can I cook?**, and open a recipe to see exact shortages.
+4. Type `potato, egg, onion, olive oil` and select **What can I cook?** directly. You do not need to supply grams or separately save the names. Open a recipe for full instructions and missing ingredients.
 5. Save a recipe and revisit My Kitchen. Records survive reloads in the same browser and origin.
 
 Supporting browsers can install the site as a PWA or add it to the home screen. This release is a website, not a native Android APK. Camera selection depends on browser/device support; gallery selection remains available.
@@ -46,7 +46,7 @@ The catalog contains **50 common ingredients** extracted from USDA FoodData Cent
 
 For each nutrient, sum `ingredient grams / 100 × value per 100 g`. Recipe totals are divided by declared servings. Energy uses USDA values directly; the chart uses approximate 4/4/9 macro energy factors, which can differ from reported calories.
 
-Unknown foods, missing weights, invalid quantities, and incomplete catalog records block calculation. Hidden oils/sauces count only when you add them. Egg pieces approximate 50 g edible mass each; weighing improves accuracy. Brands and preparations vary, so meal results remain estimates.
+Unknown foods, missing weights in manual nutrition entry, invalid quantities, and incomplete catalog records block calculation. Photo estimates explicitly assume standard oil/sauce amounts where listed; hidden ingredients can still be missed. Portion templates distinguish raw ingredient-equivalent and cooked weights, and disclose nutrient proxies and omissions. Egg pieces approximate 50 g edible mass each; weighing improves accuracy. Brands and preparations vary, so meal results remain estimates.
 
 [USDA documentation](https://fdc.nal.usda.gov/data-documentation/) · [Source archive](https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip)
 
@@ -61,7 +61,7 @@ The importer matches exact source descriptions and rejects missing nutrient valu
 
 ## Recommendation method
 
-The 12 authored recipe templates have explicit weights, servings, times, and instructions. Ingredient coverage is `min(available grams / required grams, 1)`. The score is the mean coverage across distinct ingredients; duplicate amounts are aggregated. Recipes with zero overlap are excluded.
+The 14 authored recipe templates have explicit weights, servings, times, and instructions. For names-only entries, presence counts as ingredient availability, with quantities explicitly unknown. Raw chicken, dry rice, and dry pasta may be cooked for the corresponding recipe; no mass conversion is inferred. For optional measured stock, ingredient coverage is `min(available grams / required grams, 1)`. The score is the mean coverage across distinct ingredients; duplicate amounts are aggregated. Recipes with zero overlap are excluded.
 
 Sort by coverage descending, shortage count ascending, preparation time ascending, then stable ID. Calorie preferences filter calculated per-serving energy. Each suggestion independently uses the pantry; suggestions do not jointly reserve inventory. Partial matches include a shopping list and do not imply everything is available. Dietary tags are recipe metadata, not allergy guarantees.
 
@@ -85,6 +85,6 @@ The proposed Android/backend architecture was replaced by a static website at th
 
 GitHub Actions tests and publishes web/ on pushes to main. Set Pages build source to **GitHub Actions**. Relative paths support repository-path hosting. Bump the cache version in web/sw.js when changing cached files.
 
-See [VALIDATION.md](VALIDATION.md) for executed tests and remaining checks. No classifier accuracy, AI performance improvement, native APK, or physical-device camera verification is claimed.
+See [VALIDATION.md](VALIDATION.md) for executed tests and remaining checks. No project-level classifier accuracy, portion measurement accuracy, AI performance improvement, native APK, or physical-device camera verification is claimed. First recognition needs internet; cached weights can be evicted. Manual nutrition and pantry features remain usable without the model. CPU inference can take tens of seconds on slower devices.
 
 Code and original recipes: MIT. Photographs retain the Unsplash license; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
