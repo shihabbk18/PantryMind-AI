@@ -4,6 +4,8 @@
 
 **[Open the live website](https://shihabbk18.github.io/PantryMind-AI/)** · [Validation record](VALIDATION.md) · [Data and image licenses](THIRD_PARTY_NOTICES.md)
 
+![Verified live PantryMind website](docs/website.png)
+
 ## Features
 
 - Select a meal photograph or use a supported mobile browser's camera picker. Photos stay on your device.

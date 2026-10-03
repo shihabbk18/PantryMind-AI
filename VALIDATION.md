@@ -17,6 +17,10 @@ Validated on 4 October 2026 using Node.js and the Codex in-app Chromium browser.
 - Selected an actual local JPEG through the browser chooser; it decoded and displayed with manual-confirmation guidance.
 - Stopped the local HTTP server, reloaded, and opened My Kitchen: application, recipe images, catalog, and saved records remained available.
 
+## Public deployment
+
+GitHub Actions [run 37155276074](https://github.com/shihabbk18/PantryMind-AI/actions/runs/37155276074) completed successfully for commit e276b00. The live HTTPS website loaded its catalog, registered its service worker, and calculated 200 g cooked rice correctly. The deployed interface was inspected at desktop width; local browser checks also covered the narrow mobile layout. A screenshot is included in docs/website.png.
+
 ## Remaining checks
 
 No physical Android/iOS camera or device was available. File selection was tested on desktop. Automatic recognition and image generation are absent. Browser storage can be cleared/evicted; no cloud backup exists. Public deployment is verified separately through GitHub Actions and the live page.
