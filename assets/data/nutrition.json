@@ -1,0 +1,508 @@
+{
+  "source": "USDA FoodData Central SR Legacy, April 2018 CSV release",
+  "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+  "archive_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+  "basis": "per 100 grams of the stated raw/cooked food; edible portion",
+  "ingredients": [
+    {
+      "id": "rice_cooked",
+      "name": "Rice, cooked",
+      "fdc_id": 168878,
+      "source_description": "Rice, white, long-grain, regular, enriched, cooked",
+      "kcal": 130.0,
+      "protein": 2.69,
+      "carbs": 28.17,
+      "fat": 0.28
+    },
+    {
+      "id": "rice_dry",
+      "name": "Rice, dry",
+      "fdc_id": 168877,
+      "source_description": "Rice, white, long-grain, regular, raw, enriched",
+      "kcal": 365.0,
+      "protein": 7.13,
+      "carbs": 79.95,
+      "fat": 0.66
+    },
+    {
+      "id": "chicken_cooked",
+      "name": "Chicken breast, cooked",
+      "fdc_id": 171477,
+      "source_description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+      "kcal": 165.0,
+      "protein": 31.02,
+      "carbs": 0.0,
+      "fat": 3.57
+    },
+    {
+      "id": "chicken_raw",
+      "name": "Chicken breast, raw",
+      "fdc_id": 171077,
+      "source_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "kcal": 120.0,
+      "protein": 22.5,
+      "carbs": 0.0,
+      "fat": 2.62
+    },
+    {
+      "id": "egg",
+      "name": "Egg, raw",
+      "fdc_id": 171287,
+      "source_description": "Egg, whole, raw, fresh",
+      "kcal": 143.0,
+      "protein": 12.56,
+      "carbs": 0.72,
+      "fat": 9.51
+    },
+    {
+      "id": "egg_boiled",
+      "name": "Egg, hard-boiled",
+      "fdc_id": 173424,
+      "source_description": "Egg, whole, cooked, hard-boiled",
+      "kcal": 155.0,
+      "protein": 12.58,
+      "carbs": 1.12,
+      "fat": 10.61
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive oil",
+      "fdc_id": 171413,
+      "source_description": "Oil, olive, salad or cooking",
+      "kcal": 884.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 100.0
+    },
+    {
+      "id": "canola_oil",
+      "name": "Canola oil",
+      "fdc_id": 172336,
+      "source_description": "Oil, canola",
+      "kcal": 884.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 100.0
+    },
+    {
+      "id": "butter",
+      "name": "Butter, salted",
+      "fdc_id": 173410,
+      "source_description": "Butter, salted",
+      "kcal": 717.0,
+      "protein": 0.85,
+      "carbs": 0.06,
+      "fat": 81.11
+    },
+    {
+      "id": "potato",
+      "name": "Potato, raw",
+      "fdc_id": 170026,
+      "source_description": "Potatoes, flesh and skin, raw",
+      "kcal": 77.0,
+      "protein": 2.05,
+      "carbs": 17.49,
+      "fat": 0.09
+    },
+    {
+      "id": "onion",
+      "name": "Onion, raw",
+      "fdc_id": 170000,
+      "source_description": "Onions, raw",
+      "kcal": 40.0,
+      "protein": 1.1,
+      "carbs": 9.34,
+      "fat": 0.1
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato, raw",
+      "fdc_id": 170457,
+      "source_description": "Tomatoes, red, ripe, raw, year round average",
+      "kcal": 18.0,
+      "protein": 0.88,
+      "carbs": 3.89,
+      "fat": 0.2
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic, raw",
+      "fdc_id": 169230,
+      "source_description": "Garlic, raw",
+      "kcal": 149.0,
+      "protein": 6.36,
+      "carbs": 33.06,
+      "fat": 0.5
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot, raw",
+      "fdc_id": 170393,
+      "source_description": "Carrots, raw",
+      "kcal": 41.0,
+      "protein": 0.93,
+      "carbs": 9.58,
+      "fat": 0.24
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli, raw",
+      "fdc_id": 170379,
+      "source_description": "Broccoli, raw",
+      "kcal": 34.0,
+      "protein": 2.82,
+      "carbs": 6.64,
+      "fat": 0.37
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach, raw",
+      "fdc_id": 168462,
+      "source_description": "Spinach, raw",
+      "kcal": 23.0,
+      "protein": 2.86,
+      "carbs": 3.63,
+      "fat": 0.39
+    },
+    {
+      "id": "pepper",
+      "name": "Red pepper, raw",
+      "fdc_id": 170108,
+      "source_description": "Peppers, sweet, red, raw",
+      "kcal": 26.0,
+      "protein": 0.99,
+      "carbs": 6.03,
+      "fat": 0.3
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom, raw",
+      "fdc_id": 169251,
+      "source_description": "Mushrooms, white, raw",
+      "kcal": 22.0,
+      "protein": 3.09,
+      "carbs": 3.26,
+      "fat": 0.34
+    },
+    {
+      "id": "peas",
+      "name": "Green peas, raw",
+      "fdc_id": 170419,
+      "source_description": "Peas, green, raw",
+      "kcal": 81.0,
+      "protein": 5.42,
+      "carbs": 14.45,
+      "fat": 0.4
+    },
+    {
+      "id": "corn",
+      "name": "Sweet corn, raw",
+      "fdc_id": 169998,
+      "source_description": "Corn, sweet, yellow, raw",
+      "kcal": 86.0,
+      "protein": 3.27,
+      "carbs": 18.7,
+      "fat": 1.35
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini, raw",
+      "fdc_id": 169291,
+      "source_description": "Squash, summer, zucchini, includes skin, raw",
+      "kcal": 17.0,
+      "protein": 1.21,
+      "carbs": 3.11,
+      "fat": 0.32
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber, raw",
+      "fdc_id": 168409,
+      "source_description": "Cucumber, with peel, raw",
+      "kcal": 15.0,
+      "protein": 0.65,
+      "carbs": 3.63,
+      "fat": 0.11
+    },
+    {
+      "id": "lettuce",
+      "name": "Romaine lettuce, raw",
+      "fdc_id": 169247,
+      "source_description": "Lettuce, cos or romaine, raw",
+      "kcal": 17.0,
+      "protein": 1.23,
+      "carbs": 3.29,
+      "fat": 0.3
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "fdc_id": 171705,
+      "source_description": "Avocados, raw, all commercial varieties",
+      "kcal": 160.0,
+      "protein": 2.0,
+      "carbs": 8.53,
+      "fat": 14.66
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "fdc_id": 173944,
+      "source_description": "Bananas, raw",
+      "kcal": 89.0,
+      "protein": 1.09,
+      "carbs": 22.84,
+      "fat": 0.33
+    },
+    {
+      "id": "apple",
+      "name": "Apple with skin",
+      "fdc_id": 171688,
+      "source_description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 52.0,
+      "protein": 0.26,
+      "carbs": 13.81,
+      "fat": 0.17
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "fdc_id": 169097,
+      "source_description": "Oranges, raw, all commercial varieties",
+      "kcal": 47.0,
+      "protein": 0.94,
+      "carbs": 11.75,
+      "fat": 0.12
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon juice",
+      "fdc_id": 167747,
+      "source_description": "Lemon juice, raw",
+      "kcal": 22.0,
+      "protein": 0.35,
+      "carbs": 6.9,
+      "fat": 0.24
+    },
+    {
+      "id": "kidney_beans",
+      "name": "Kidney beans, cooked",
+      "fdc_id": 175194,
+      "source_description": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+      "kcal": 127.0,
+      "protein": 8.67,
+      "carbs": 22.8,
+      "fat": 0.5
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas, cooked",
+      "fdc_id": 173757,
+      "source_description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+      "kcal": 164.0,
+      "protein": 8.86,
+      "carbs": 27.42,
+      "fat": 2.59
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils, cooked",
+      "fdc_id": 172421,
+      "source_description": "Lentils, mature seeds, cooked, boiled, without salt",
+      "kcal": 116.0,
+      "protein": 9.02,
+      "carbs": 20.13,
+      "fat": 0.38
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu, firm",
+      "fdc_id": 172475,
+      "source_description": "Tofu, raw, firm, prepared with calcium sulfate",
+      "kcal": 144.0,
+      "protein": 17.27,
+      "carbs": 2.78,
+      "fat": 8.72
+    },
+    {
+      "id": "milk",
+      "name": "Milk, whole",
+      "fdc_id": 171265,
+      "source_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "kcal": 61.0,
+      "protein": 3.15,
+      "carbs": 4.8,
+      "fat": 3.25
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt, plain",
+      "fdc_id": 171284,
+      "source_description": "Yogurt, plain, whole milk",
+      "kcal": 61.0,
+      "protein": 3.47,
+      "carbs": 4.66,
+      "fat": 3.25
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar cheese",
+      "fdc_id": 173414,
+      "source_description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 403.0,
+      "protein": 22.87,
+      "carbs": 3.37,
+      "fat": 33.31
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella, whole milk",
+      "fdc_id": 170845,
+      "source_description": "Cheese, mozzarella, whole milk",
+      "kcal": 299.0,
+      "protein": 22.17,
+      "carbs": 2.4,
+      "fat": 22.14
+    },
+    {
+      "id": "oats",
+      "name": "Oats, dry",
+      "fdc_id": 169705,
+      "source_description": "Oats (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 389.0,
+      "protein": 16.89,
+      "carbs": 66.27,
+      "fat": 6.9
+    },
+    {
+      "id": "pasta_cooked",
+      "name": "Pasta, cooked",
+      "fdc_id": 169737,
+      "source_description": "Pasta, cooked, enriched, without added salt",
+      "kcal": 158.0,
+      "protein": 5.8,
+      "carbs": 30.86,
+      "fat": 0.93
+    },
+    {
+      "id": "pasta_dry",
+      "name": "Pasta, dry",
+      "fdc_id": 169736,
+      "source_description": "Pasta, dry, enriched",
+      "kcal": 371.0,
+      "protein": 13.04,
+      "carbs": 74.67,
+      "fat": 1.51
+    },
+    {
+      "id": "bread",
+      "name": "Whole-wheat bread",
+      "fdc_id": 172688,
+      "source_description": "Bread, whole-wheat, commercially prepared",
+      "kcal": 252.0,
+      "protein": 12.45,
+      "carbs": 42.71,
+      "fat": 3.5
+    },
+    {
+      "id": "flour",
+      "name": "Wheat flour",
+      "fdc_id": 169761,
+      "source_description": "Wheat flour, white, all-purpose, unenriched",
+      "kcal": 364.0,
+      "protein": 10.33,
+      "carbs": 76.31,
+      "fat": 0.98
+    },
+    {
+      "id": "sugar",
+      "name": "White sugar",
+      "fdc_id": 169655,
+      "source_description": "Sugars, granulated",
+      "kcal": 387.0,
+      "protein": 0.0,
+      "carbs": 99.98,
+      "fat": 0.0
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "fdc_id": 169640,
+      "source_description": "Honey",
+      "kcal": 304.0,
+      "protein": 0.3,
+      "carbs": 82.4,
+      "fat": 0.0
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "fdc_id": 170567,
+      "source_description": "Nuts, almonds",
+      "kcal": 579.0,
+      "protein": 21.15,
+      "carbs": 21.55,
+      "fat": 49.93
+    },
+    {
+      "id": "peanut_butter",
+      "name": "Peanut butter, smooth",
+      "fdc_id": 172470,
+      "source_description": "Peanut butter, smooth style, without salt",
+      "kcal": 598.0,
+      "protein": 22.21,
+      "carbs": 22.31,
+      "fat": 51.36
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon, raw",
+      "fdc_id": 175167,
+      "source_description": "Fish, salmon, Atlantic, farmed, raw",
+      "kcal": 208.0,
+      "protein": 20.42,
+      "carbs": 0.0,
+      "fat": 13.42
+    },
+    {
+      "id": "tuna",
+      "name": "Tuna, canned in water",
+      "fdc_id": 173709,
+      "source_description": "Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 86.0,
+      "protein": 19.44,
+      "carbs": 0.0,
+      "fat": 0.96
+    },
+    {
+      "id": "beef",
+      "name": "Ground beef, 90% lean, raw",
+      "fdc_id": 174030,
+      "source_description": "Beef, ground, 90% lean meat / 10% fat, raw",
+      "kcal": 176.0,
+      "protein": 20.0,
+      "carbs": 0.0,
+      "fat": 10.0
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy sauce",
+      "fdc_id": 174277,
+      "source_description": "Soy sauce made from soy and wheat (shoyu)",
+      "kcal": 53.0,
+      "protein": 8.14,
+      "carbs": 4.93,
+      "fat": 0.57
+    },
+    {
+      "id": "salt",
+      "name": "Table salt",
+      "fdc_id": 173468,
+      "source_description": "Salt, table",
+      "kcal": 0.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0
+    }
+  ]
+}

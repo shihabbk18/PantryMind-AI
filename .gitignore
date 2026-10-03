@@ -1,0 +1,27 @@
+.dart_tool/
+.flutter-plugins*
+build/
+.idea/
+*.iml
+.env
+.env.*
+!.env.example
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+coverage/
+test-results/
+# Superseded, unpublished Android scaffold retained only in the local workspace.
+/android/
+/lib/
+/test/
+/integration_test/
+/pubspec.yaml
+/pubspec.lock
+/analysis_options.yaml
+/.metadata
+/assets/models/
+/assets/images/

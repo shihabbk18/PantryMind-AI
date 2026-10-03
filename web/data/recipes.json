@@ -1,0 +1,507 @@
+[
+  {
+    "id": "egg-rice",
+    "name": "Golden egg fried rice",
+    "description": "A quick skillet meal with fluffy egg, rice, and crisp vegetables.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 2,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "rice_cooked",
+        "grams": 350
+      },
+      {
+        "food": "egg",
+        "grams": 100
+      },
+      {
+        "food": "carrot",
+        "grams": 80
+      },
+      {
+        "food": "peas",
+        "grams": 80
+      },
+      {
+        "food": "onion",
+        "grams": 60
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "soy_sauce",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Chop the onion and carrot. Beat the eggs in a bowl.",
+      "Heat the oil in a skillet. Cook the onion and carrot until softened, then add the peas.",
+      "Push vegetables to one side. Add the eggs and scramble until fully set.",
+      "Add the cooked rice and soy sauce. Stir until everything is piping hot. Serve immediately."
+    ]
+  },
+  {
+    "id": "chicken-rice",
+    "name": "Chicken & vegetable rice bowl",
+    "description": "A balanced bowl of tender chicken, warm rice, and broccoli.",
+    "image": "rice",
+    "minutes": 25,
+    "servings": 2,
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "chicken_raw",
+        "grams": 300
+      },
+      {
+        "food": "rice_cooked",
+        "grams": 300
+      },
+      {
+        "food": "broccoli",
+        "grams": 200
+      },
+      {
+        "food": "carrot",
+        "grams": 100
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      },
+      {
+        "food": "lemon",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Cut the chicken into bite-size pieces. Chop the vegetables.",
+      "Heat the oil and cook the chicken with garlic until it reaches 74°C / 165°F internally.",
+      "Add the broccoli and carrot with a splash of water and cook until tender.",
+      "Reheat the cooked rice until piping hot. Divide into bowls and top with chicken, vegetables, and lemon juice."
+    ]
+  },
+  {
+    "id": "tomato-pasta",
+    "name": "Tomato & garlic pasta",
+    "description": "A simple tomato sauce, a little garlic, and a comforting bowl of pasta.",
+    "image": "pasta",
+    "minutes": 25,
+    "servings": 2,
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "pasta_dry",
+        "grams": 180
+      },
+      {
+        "food": "tomato",
+        "grams": 350
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Boil the pasta in water according to its package directions.",
+      "Chop tomatoes and onion. Gently cook the onion and garlic in olive oil.",
+      "Add the tomatoes and simmer for 12–15 minutes, stirring occasionally.",
+      "Drain the pasta, saving a little cooking water. Toss with the sauce, loosening with cooking water if needed."
+    ]
+  },
+  {
+    "id": "chickpea-salad",
+    "name": "Bright chickpea salad",
+    "description": "A fresh, satisfying bowl with chickpeas, crunchy cucumber, and lemon.",
+    "image": "salad",
+    "minutes": 15,
+    "servings": 2,
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "chickpeas",
+        "grams": 300
+      },
+      {
+        "food": "cucumber",
+        "grams": 160
+      },
+      {
+        "food": "tomato",
+        "grams": 200
+      },
+      {
+        "food": "onion",
+        "grams": 40
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "lemon",
+        "grams": 25
+      }
+    ],
+    "steps": [
+      "Use cooked, cooled chickpeas. Rinse and drain if using canned chickpeas.",
+      "Chop the cucumber, tomatoes, and onion into small pieces.",
+      "Whisk the olive oil with lemon juice.",
+      "Toss everything together and divide between two bowls."
+    ]
+  },
+  {
+    "id": "spinach-omelet",
+    "name": "Spinach & mushroom omelet",
+    "description": "A protein-rich breakfast with soft vegetables and a golden egg fold.",
+    "image": "breakfast",
+    "minutes": 15,
+    "servings": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "egg",
+        "grams": 150
+      },
+      {
+        "food": "spinach",
+        "grams": 50
+      },
+      {
+        "food": "mushroom",
+        "grams": 70
+      },
+      {
+        "food": "olive_oil",
+        "grams": 8
+      },
+      {
+        "food": "cheddar",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Slice the mushrooms and wash the spinach. Beat the eggs.",
+      "Heat oil in a non-stick skillet and cook the mushrooms. Add spinach until wilted.",
+      "Pour in the eggs and cook gently until set, lifting the edges so uncooked egg reaches the pan.",
+      "Sprinkle with cheese, fold, and cook until no liquid egg remains."
+    ]
+  },
+  {
+    "id": "lentil-bowl",
+    "name": "Warm lentil & roasted vegetable bowl",
+    "description": "Hearty lentils and colorful vegetables, finished with a lemon dressing.",
+    "image": "salad",
+    "minutes": 30,
+    "servings": 2,
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "lentils",
+        "grams": 350
+      },
+      {
+        "food": "carrot",
+        "grams": 150
+      },
+      {
+        "food": "pepper",
+        "grams": 160
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      },
+      {
+        "food": "lemon",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Heat the oven to 200°C / 390°F. Chop the vegetables.",
+      "Toss the vegetables with olive oil and roast for 20–25 minutes until tender.",
+      "Warm the cooked lentils with a splash of water.",
+      "Combine lentils and vegetables. Finish with lemon juice and divide between two bowls."
+    ]
+  },
+  {
+    "id": "banana-oats",
+    "name": "Banana & almond overnight oats",
+    "description": "A make-ahead breakfast with creamy oats, banana, and almonds.",
+    "image": "breakfast",
+    "minutes": 10,
+    "servings": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "oats",
+        "grams": 50
+      },
+      {
+        "food": "milk",
+        "grams": 150
+      },
+      {
+        "food": "yogurt",
+        "grams": 70
+      },
+      {
+        "food": "banana",
+        "grams": 100
+      },
+      {
+        "food": "almonds",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Mix oats, milk, and yogurt in a covered container.",
+      "Refrigerate overnight or for at least four hours. The listed preparation time excludes chilling.",
+      "Slice the banana and roughly chop the almonds.",
+      "Stir the oats and add the banana and almonds before serving."
+    ]
+  },
+  {
+    "id": "potato-egg",
+    "name": "Rustic potato & egg skillet",
+    "description": "Golden potatoes, sweet onion, and eggs in a simple one-pan meal.",
+    "image": "breakfast",
+    "minutes": 30,
+    "servings": 2,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "potato",
+        "grams": 350
+      },
+      {
+        "food": "egg",
+        "grams": 150
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      },
+      {
+        "food": "tomato",
+        "grams": 150
+      }
+    ],
+    "steps": [
+      "Dice the potatoes and onion. Parboil potatoes for 5–7 minutes, then drain.",
+      "Heat olive oil in a skillet and fry the potato and onion until golden and tender.",
+      "Add chopped tomatoes and cook for a few minutes.",
+      "Make small wells and add eggs. Cover and cook until whites and yolks are fully set."
+    ]
+  },
+  {
+    "id": "tofu-rice",
+    "name": "Tofu & broccoli rice bowl",
+    "description": "A plant-based skillet bowl with firm tofu and crisp broccoli.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 2,
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "tofu",
+        "grams": 250
+      },
+      {
+        "food": "rice_cooked",
+        "grams": 300
+      },
+      {
+        "food": "broccoli",
+        "grams": 200
+      },
+      {
+        "food": "soy_sauce",
+        "grams": 20
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      }
+    ],
+    "steps": [
+      "Drain and cube the tofu. Chop broccoli into small florets.",
+      "Heat olive oil and brown the tofu on both sides.",
+      "Add garlic and broccoli with a splash of water; cover briefly until tender.",
+      "Add soy sauce. Reheat cooked rice until piping hot and serve with the tofu and broccoli."
+    ]
+  },
+  {
+    "id": "tuna-pasta",
+    "name": "Tuna & sweetcorn pasta salad",
+    "description": "An easy, satisfying pasta salad with tuna, corn, and crunchy vegetables.",
+    "image": "pasta",
+    "minutes": 20,
+    "servings": 2,
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "pasta_dry",
+        "grams": 160
+      },
+      {
+        "food": "tuna",
+        "grams": 150
+      },
+      {
+        "food": "corn",
+        "grams": 100
+      },
+      {
+        "food": "cucumber",
+        "grams": 120
+      },
+      {
+        "food": "yogurt",
+        "grams": 80
+      },
+      {
+        "food": "lemon",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Cook pasta according to package directions. Cool promptly under cold water and drain.",
+      "Cook the sweetcorn until tender and cool. Drain the canned tuna.",
+      "Dice the cucumber and mix yogurt with lemon juice.",
+      "Combine all ingredients. Serve promptly or refrigerate in a covered container."
+    ]
+  },
+  {
+    "id": "bean-chili",
+    "name": "Simple red bean chili",
+    "description": "A warming tomato and bean bowl with plenty of vegetables.",
+    "image": "rice",
+    "minutes": 30,
+    "servings": 2,
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "kidney_beans",
+        "grams": 350
+      },
+      {
+        "food": "tomato",
+        "grams": 300
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "pepper",
+        "grams": 150
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Use fully cooked kidney beans; this recipe does not prepare dried raw beans.",
+      "Chop vegetables. Cook onion and garlic in olive oil until softened.",
+      "Add pepper and tomatoes. Simmer for 15 minutes.",
+      "Add the cooked beans and heat thoroughly. Serve in bowls; season to taste and log any extra ingredients separately."
+    ]
+  },
+  {
+    "id": "avocado-toast",
+    "name": "Avocado & egg toast",
+    "description": "Creamy avocado and a cooked egg on whole-wheat bread.",
+    "image": "breakfast",
+    "minutes": 12,
+    "servings": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "bread",
+        "grams": 70
+      },
+      {
+        "food": "avocado",
+        "grams": 80
+      },
+      {
+        "food": "egg",
+        "grams": 50
+      },
+      {
+        "food": "lemon",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 4
+      }
+    ],
+    "steps": [
+      "Toast the whole-wheat bread.",
+      "Mash avocado with lemon juice.",
+      "Heat olive oil and cook the egg until the white and yolk are fully set.",
+      "Spread avocado on toast and top with the egg. Add any extras to your nutrition log."
+    ]
+  }
+]
