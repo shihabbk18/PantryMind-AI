@@ -39,7 +39,7 @@ Application code, icons, and original recipe templates use the root MIT LICENSE.
 
 - [Transformers.js 3.8.1](https://github.com/huggingface/transformers.js/tree/3.8.1): Apache-2.0, full license in web/vendor/TRANSFORMERS-LICENSE.
 - ONNX Runtime Web 1.22.0-dev.20250409-89f8206ba4: MIT, full license in web/vendor/ONNX-LICENSE. The matching JS/WASM binaries are bundled.
-- [CLIP ViT-B/32](https://github.com/openai/CLIP), MIT license, full text in web/vendor/CLIP-LICENSE. [Xenova browser-compatible ONNX conversion](https://huggingface.co/Xenova/clip-vit-base-patch32) revision `d15189d7028b43f1d3e65039190477f6af591c2a` is pinned. q8 text and vision weights total 153,621,508 bytes, downloaded by the browser and cached rather than committed. Model publisher examples are not an application accuracy benchmark. No OpenAI API, hosted inference or paid service is used.
+- [CLIP ViT-B/32](https://github.com/openai/CLIP), MIT license, full text in web/vendor/CLIP-LICENSE. [Xenova browser-compatible ONNX conversion](https://huggingface.co/Xenova/clip-vit-base-patch32) revision `d15189d7028b43f1d3e65039190477f6af591c2a` is pinned. The combined q8 file onnx/model_quantized.onnx is 153,695,702 bytes, downloaded by the browser and cached rather than committed. Model publisher examples are not an application accuracy benchmark. No OpenAI API, hosted inference or paid service is used.
 
 Ingredient/portion heuristics and recipe assumptions are original project code/data and are not measurements produced by the classifier.
 

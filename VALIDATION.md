@@ -26,4 +26,12 @@ These are real inference calls and arithmetic estimates, not a nutrition ground-
 
 CLIP compares only bundled descriptions; it cannot measure portions, verify hidden ingredients or segment a mixed plate. Non-food and uncertainty thresholds are heuristic. Bangladeshi labels are supported candidates, without a claim of validated accuracy for every dish. First recognition needs internet and roughly 154 MB of weights plus the bundled runtime; later operation depends on browser cache retention and device memory. Manual search and deterministic nutrition remain available if inference fails. Recipe images illustrate dish families and may differ from the exact recipe. Camera capture and PWA installation on a physical phone remain unverified; no physical device is available. Local browser storage is not cloud backup.
 
-Public deployment verification and final responsive/persistence checks are recorded after publication below.
+## Verified public deployment
+
+[GitHub Actions run 37207264665](https://github.com/shihabbk18/PantryMind-AI/actions/runs/37207264665) completed successfully for application commit `38cee23097fcf95627117593cc61441626e8e34f`. Public HTTPS responses returned 200 and served the CLIP worker, diary controls and all 40 recipes at [the live site](https://shihabbk18.github.io/PantryMind-AI/).
+
+The deployed browser ran the actual burger model: 72% leading relative score and the same 540 kcal estimate. Large portion changed the estimate to 810 kcal and returning to Medium restored it. A saved Lunch entry survived reload with its photo and all four daily totals. Existing version 1 pantry records remained readable after the IndexedDB upgrade. The full catalog produced the same three names-only recommendations as local testing. Saving a favorite and adding/checking the 180 g tomato shortage both persisted after reload.
+
+At a 390 × 844 viewport, pantry and diary layouts were usable with no horizontal overflow (document width 375 px, excluding the scrollbar). Four diary totals arranged in two columns. Local diary editing changed the existing record's name/category without duplicating it; grocery checkbox state also persisted. [Desktop scanner screenshot](docs/website.png) and [mobile diary screenshot](docs/mobile-diary.png) show actual public results.
+
+The first visit after publication used the older offline cache; reloading after the new cache installed activated version 2. No physical-phone camera or installation success is claimed.

@@ -6,6 +6,8 @@
 
 ![PantryMind automatic photo estimate](docs/website.png)
 
+[View the mobile Food Diary screenshot](docs/mobile-diary.png).
+
 ## Features
 
 - Select a meal photograph or use a supported mobile browser's camera picker. Photos stay on your device.
