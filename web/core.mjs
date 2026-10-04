@@ -61,7 +61,8 @@ export function pantryInventory(pantry,foods) {
 const foodAliases={potato:'potato',potatoes:'potato',egg:'egg',eggs:'egg',onions:'onion',onion:'onion',oil:'olive_oil',olive_oil:'olive_oil',chicken:'chicken_raw',chicken_breast:'chicken_raw',rice:'rice_cooked',cooked_rice:'rice_cooked',dry_rice:'rice_dry',pasta:'pasta_cooked',tomatoes:'tomato',cheese:'cheddar',beef:'beef',beans:'kidney_beans',lentils:'lentils',chickpeas:'chickpeas',peas:'peas',spinach:'spinach',bread:'bread',milk:'milk',garlic:'garlic',pepper:'pepper',bell_pepper:'pepper',mushrooms:'mushroom',oats:'oats',yoghurt:'yogurt'};
 export function resolveIngredient(name,foods) {
  const text=String(name).toLowerCase().trim(),key=text.replace(/[ -]+/g,'_');
- return foods.get(foodAliases[key]||key)||[...foods.values()].find(f=>f.name.toLowerCase()===text);
+ const regional={alu:'potato',aloo:'potato',dim:'egg',peyaj:'onion',piyaj:'onion',chal:'rice_dry',dal:'lentils','আলু':'potato','ডিম':'egg','পেঁয়াজ':'onion','চাল':'rice_dry','ডাল':'lentils'};
+ return foods.get(regional[key]||foodAliases[key]||key)||[...foods.values()].find(f=>f.name.toLowerCase()===text);
 }
 export function parseIngredientNames(text,foods) {
  const names=String(text).split(/[,;\n]+/).map(s=>s.trim()).filter(Boolean);

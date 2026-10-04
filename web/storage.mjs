@@ -3,9 +3,9 @@ export function openKitchen() {
   if(connection) return connection;
   connection=new Promise((resolve,reject)=>{
     if(!globalThis.indexedDB) return reject(new Error('Local storage is unavailable. Use a browser that supports IndexedDB.'));
-    const request=indexedDB.open('pantrymind-kitchen',1);
+    const request=indexedDB.open('pantrymind-kitchen',2);
     request.onupgradeneeded=()=>{
-      for(const store of ['pantry','favorites','meals']) request.result.createObjectStore(store,{keyPath:'id'});
+      for(const store of ['pantry','favorites','meals','groceries'])if(!request.result.objectStoreNames.contains(store))request.result.createObjectStore(store,{keyPath:'id'});
     };
     request.onerror=()=>reject(new Error('Your browser could not open local kitchen storage. Check its privacy settings.'));
     request.onblocked=()=>reject(new Error('Close other PantryMind tabs and reload to update local storage.'));
@@ -14,6 +14,9 @@ export function openKitchen() {
     };
   });
   return connection;
+}
+export async function replaceRecords(store,values){
+ const db=await openKitchen();return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readwrite'),target=tx.objectStore(store);target.clear();for(const value of values)target.put(value);tx.oncomplete=resolve;tx.onerror=tx.onabort=()=>reject(new Error('Could not save the grocery list. Storage may be full or disabled.'));});
 }
 export async function records(store) {
   const db=await openKitchen();

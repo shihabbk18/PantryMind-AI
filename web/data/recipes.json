@@ -44,7 +44,9 @@
       "Heat the oil in a skillet. Cook the onion and carrot until softened, then add the peas.",
       "Push vegetables to one side. Add the eggs and scramble until fully set.",
       "Add the cooked rice and soy sauce. Stir until everything is piping hot. Serve immediately."
-    ]
+    ],
+    "family": "rice",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "chicken-rice",
@@ -86,10 +88,12 @@
     ],
     "steps": [
       "Cut the chicken into bite-size pieces. Chop the vegetables.",
-      "Heat the oil and cook the chicken with garlic until it reaches 74\u00b0C / 165\u00b0F internally.",
+      "Heat the oil and cook the chicken with garlic until it reaches 74°C / 165°F internally.",
       "Add the broccoli and carrot with a splash of water and cook until tender.",
       "Reheat the cooked rice until piping hot. Divide into bowls and top with chicken, vegetables, and lemon juice."
-    ]
+    ],
+    "family": "rice",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "tomato-pasta",
@@ -127,9 +131,11 @@
     "steps": [
       "Boil the pasta in water according to its package directions.",
       "Chop tomatoes and onion. Gently cook the onion and garlic in olive oil.",
-      "Add the tomatoes and simmer for 12\u201315 minutes, stirring occasionally.",
+      "Add the tomatoes and simmer for 12–15 minutes, stirring occasionally.",
       "Drain the pasta, saving a little cooking water. Toss with the sauce, loosening with cooking water if needed."
-    ]
+    ],
+    "family": "pasta",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "chickpea-salad",
@@ -173,13 +179,15 @@
       "Chop the cucumber, tomatoes, and onion into small pieces.",
       "Whisk the olive oil with lemon juice.",
       "Toss everything together and divide between two bowls."
-    ]
+    ],
+    "family": "salad",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "spinach-omelet",
     "name": "Spinach & mushroom omelet",
     "description": "A protein-rich breakfast with soft vegetables and a golden egg fold.",
-    "image": "breakfast",
+    "image": "eggs",
     "minutes": 15,
     "servings": 1,
     "tags": [
@@ -212,7 +220,9 @@
       "Heat oil in a non-stick skillet and cook the mushrooms. Add spinach until wilted.",
       "Pour in the eggs and cook gently until set, lifting the edges so uncooked egg reaches the pan.",
       "Sprinkle with cheese, fold, and cook until no liquid egg remains."
-    ]
+    ],
+    "family": "egg",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "lentil-bowl",
@@ -252,17 +262,19 @@
       }
     ],
     "steps": [
-      "Heat the oven to 200\u00b0C / 390\u00b0F. Chop the vegetables.",
-      "Toss the vegetables with olive oil and roast for 20\u201325 minutes until tender.",
+      "Heat the oven to 200°C / 390°F. Chop the vegetables.",
+      "Toss the vegetables with olive oil and roast for 20–25 minutes until tender.",
       "Warm the cooked lentils with a splash of water.",
       "Combine lentils and vegetables. Finish with lemon juice and divide between two bowls."
-    ]
+    ],
+    "family": "salad",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "banana-oats",
     "name": "Banana & almond overnight oats",
     "description": "A make-ahead breakfast with creamy oats, banana, and almonds.",
-    "image": "breakfast",
+    "image": "oats",
     "minutes": 10,
     "servings": 1,
     "tags": [
@@ -295,13 +307,15 @@
       "Refrigerate overnight or for at least four hours. The listed preparation time excludes chilling.",
       "Slice the banana and roughly chop the almonds.",
       "Stir the oats and add the banana and almonds before serving."
-    ]
+    ],
+    "family": "breakfast",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "potato-egg",
     "name": "Rustic potato & egg skillet",
     "description": "Golden potatoes, sweet onion, and eggs in a simple one-pan meal.",
-    "image": "breakfast",
+    "image": "eggs",
     "minutes": 30,
     "servings": 2,
     "tags": [
@@ -330,11 +344,13 @@
       }
     ],
     "steps": [
-      "Dice the potatoes and onion. Parboil potatoes for 5\u20137 minutes, then drain.",
+      "Dice the potatoes and onion. Parboil potatoes for 5–7 minutes, then drain.",
       "Heat olive oil in a skillet and fry the potato and onion until golden and tender.",
       "Add chopped tomatoes and cook for a few minutes.",
       "Make small wells and add eggs. Cover and cook until whites and yolks are fully set."
-    ]
+    ],
+    "family": "skillet",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "tofu-rice",
@@ -378,7 +394,9 @@
       "Heat olive oil and brown the tofu on both sides.",
       "Add garlic and broccoli with a splash of water; cover briefly until tender.",
       "Add soy sauce. Reheat cooked rice until piping hot and serve with the tofu and broccoli."
-    ]
+    ],
+    "family": "rice",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "tuna-pasta",
@@ -419,13 +437,15 @@
       "Cook the sweetcorn until tender and cool. Drain the canned tuna.",
       "Dice the cucumber and mix yogurt with lemon juice.",
       "Combine all ingredients. Serve promptly or refrigerate in a covered container."
-    ]
+    ],
+    "family": "pasta",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "bean-chili",
     "name": "Simple red bean chili",
     "description": "A warming tomato and bean bowl with plenty of vegetables.",
-    "image": "rice",
+    "image": "soup",
     "minutes": 30,
     "servings": 2,
     "tags": [
@@ -463,7 +483,9 @@
       "Chop vegetables. Cook onion and garlic in olive oil until softened.",
       "Add pepper and tomatoes. Simmer for 15 minutes.",
       "Add the cooked beans and heat thoroughly. Serve in bowls; season to taste and log any extra ingredients separately."
-    ]
+    ],
+    "family": "stew",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "avocado-toast",
@@ -502,13 +524,15 @@
       "Mash avocado with lemon juice.",
       "Heat olive oil and cook the egg until the white and yolk are fully set.",
       "Spread avocado on toast and top with the egg. Add any extras to your nutrition log."
-    ]
+    ],
+    "family": "bread",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "spanish-omelette",
     "name": "Spanish-style potato omelette",
     "description": "Tender potatoes and onion folded into a simple egg omelette.",
-    "image": "breakfast",
+    "image": "eggs",
     "minutes": 25,
     "servings": 2,
     "tags": [
@@ -536,13 +560,15 @@
       "Thinly slice potato and onion. Cook in oil over medium-low heat until the potato is tender.",
       "Beat the eggs, combine with the vegetables, and return to the pan.",
       "Cook gently until the eggs are fully set, flipping carefully or finishing under a grill. Divide into two servings."
-    ]
+    ],
+    "family": "egg",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
   },
   {
     "id": "potato-egg-curry",
     "name": "Quick potato & egg tomato stew",
     "description": "A warm one-pan potato and egg meal; add curry spices if you have them.",
-    "image": "rice",
+    "image": "curry",
     "minutes": 25,
     "servings": 2,
     "tags": [
@@ -574,6 +600,1128 @@
       "Dice potatoes and onion. Soften onion in oil, then add tomatoes and potato.",
       "Add a splash of water, cover, and simmer until the potatoes are tender. Optional curry spices are not included in the nutrition estimate.",
       "Crack in the eggs, cover, and cook until whites and yolks are fully set. Divide into two servings."
-    ]
+    ],
+    "family": "curry",
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+  },
+  {
+    "id": "chicken-biryani",
+    "name": "Home-style chicken biryani",
+    "description": "A simplified spiced chicken and rice pot inspired by Bangladeshi home cooking.",
+    "image": "biryani",
+    "minutes": 45,
+    "servings": 3,
+    "family": "rice",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "chicken_raw",
+        "grams": 400
+      },
+      {
+        "food": "rice_dry",
+        "grams": 240
+      },
+      {
+        "food": "onion",
+        "grams": 180
+      },
+      {
+        "food": "yogurt",
+        "grams": 100
+      },
+      {
+        "food": "garlic",
+        "grams": 15
+      },
+      {
+        "food": "olive_oil",
+        "grams": 25
+      }
+    ],
+    "steps": [
+      "Rinse the dry rice. Slice onion and chop garlic; mix chicken with yogurt and optional biryani spices.",
+      "Soften onion in oil, add garlic and chicken, and cook until the chicken reaches 74°C / 165°F.",
+      "Cook the rice separately according to its package, then layer with chicken. Cover over low heat for 8 minutes.",
+      "Rest briefly, mix gently and divide into three servings. Optional spices are not included in nutrition."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "vegetable-khichuri",
+    "name": "Vegetable khichuri",
+    "description": "Comforting rice and lentils with soft vegetables; cooked lentils keep this version quick.",
+    "image": "biryani",
+    "minutes": 30,
+    "servings": 3,
+    "family": "rice",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "rice_dry",
+        "grams": 180
+      },
+      {
+        "food": "lentils",
+        "grams": 350
+      },
+      {
+        "food": "potato",
+        "grams": 180
+      },
+      {
+        "food": "carrot",
+        "grams": 120
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "olive_oil",
+        "grams": 18
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      }
+    ],
+    "steps": [
+      "Rinse the dry rice and dice vegetables. Use already cooked lentils.",
+      "Soften onion and garlic in oil. Add rice, potato and carrot with water according to rice package directions.",
+      "Simmer covered until the rice and potato are tender; stir in cooked lentils and extra hot water for a soft consistency.",
+      "Heat thoroughly and divide into three portions. Add turmeric or cumin only if available; these are optional extras."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "simple-dal",
+    "name": "Everyday lentil dal",
+    "description": "A simple lentil bowl with onion and garlic, inspired by Bangladeshi dal.",
+    "image": "soup",
+    "minutes": 20,
+    "servings": 2,
+    "family": "stew",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "lentils",
+        "grams": 400
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "tomato",
+        "grams": 150
+      }
+    ],
+    "steps": [
+      "Use cooked lentils. Chop onion, tomato and garlic.",
+      "Soften onion and garlic in oil, then add tomato and cook until soft.",
+      "Add lentils and a little water; simmer 10 minutes. Optional cumin or turmeric may be added separately.",
+      "Serve two bowls. Rice or bread is not included in this estimate."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "aloo-bhorta",
+    "name": "Aloo bhorta with onion",
+    "description": "Mashed potato and onion with a small amount of oil; a simplified Bangladeshi side.",
+    "image": "potato",
+    "minutes": 25,
+    "servings": 2,
+    "family": "side",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "potato",
+        "grams": 400
+      },
+      {
+        "food": "onion",
+        "grams": 70
+      },
+      {
+        "food": "olive_oil",
+        "grams": 10
+      }
+    ],
+    "steps": [
+      "Peel and boil potatoes until very tender, then drain.",
+      "Finely chop onion; soften it briefly in oil if you prefer a milder flavor.",
+      "Mash potato with onion and oil. Divide into two side portions.",
+      "Traditional mustard oil and chili are optional; this catalog estimate uses olive oil and excludes extras."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "dim-bhaji",
+    "name": "Dim bhaji: onion egg skillet",
+    "description": "Fully cooked eggs with softened onion; quick and pantry-friendly.",
+    "image": "eggs",
+    "minutes": 12,
+    "servings": 2,
+    "family": "skillet",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "egg",
+        "grams": 200
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Beat four medium eggs, approximately 200 g edible weight. Slice onion.",
+      "Soften onion in oil in a skillet. Add optional chili only if available.",
+      "Pour in eggs and stir until completely set. Divide into two servings."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "chicken-curry",
+    "name": "Simple chicken tomato curry",
+    "description": "A tomato-based chicken curry with optional home spices.",
+    "image": "curry",
+    "minutes": 35,
+    "servings": 3,
+    "family": "curry",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "chicken_raw",
+        "grams": 450
+      },
+      {
+        "food": "tomato",
+        "grams": 300
+      },
+      {
+        "food": "onion",
+        "grams": 180
+      },
+      {
+        "food": "garlic",
+        "grams": 15
+      },
+      {
+        "food": "yogurt",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Chop chicken, tomatoes and onion. Soften onion and garlic in oil.",
+      "Add chicken and optional curry spices; cook while stirring.",
+      "Add tomato, yogurt and a splash of water. Simmer until chicken reaches 74°C / 165°F internally.",
+      "Divide into three portions. Rice and optional spices are not included."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "fish-curry",
+    "name": "Tomato fish curry",
+    "description": "A simple fish curry. Salmon is the documented nutrition proxy for the fish fillet.",
+    "image": "fish",
+    "minutes": 30,
+    "servings": 2,
+    "family": "curry",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "salmon",
+        "grams": 300
+      },
+      {
+        "food": "tomato",
+        "grams": 250
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Cut raw salmon into portions. Chop onion, garlic and tomato.",
+      "Soften onion and garlic in oil; add tomato and optional curry spices.",
+      "Add fish and a little water. Cover and simmer gently until fish reaches 63°C / 145°F.",
+      "Divide into two servings. Using another fish changes nutrition; update the ingredients if needed."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "beef-potato-curry",
+    "name": "Beef & potato curry",
+    "description": "A quick ground-beef adaptation of beef curry; catalog beef is 90% lean raw ground beef.",
+    "image": "curry",
+    "minutes": 35,
+    "servings": 3,
+    "family": "curry",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "beef",
+        "grams": 400
+      },
+      {
+        "food": "potato",
+        "grams": 300
+      },
+      {
+        "food": "tomato",
+        "grams": 200
+      },
+      {
+        "food": "onion",
+        "grams": 150
+      },
+      {
+        "food": "garlic",
+        "grams": 12
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Dice potato and onion; chop garlic. Soften onion in oil.",
+      "Add raw ground beef and garlic, breaking up clumps. Cook beef to 71°C / 160°F.",
+      "Add potato, tomato, optional curry spices and water. Cover and simmer until potatoes are tender.",
+      "Divide into three servings. This quick version uses ground beef rather than slow-cooked chunks."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "chana-potato",
+    "name": "Chickpea & potato curry",
+    "description": "A filling chickpea curry using cooked chickpeas and tender potato.",
+    "image": "curry",
+    "minutes": 30,
+    "servings": 3,
+    "family": "curry",
+    "cuisine": "South Asian inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "chickpeas",
+        "grams": 400
+      },
+      {
+        "food": "potato",
+        "grams": 300
+      },
+      {
+        "food": "onion",
+        "grams": 120
+      },
+      {
+        "food": "tomato",
+        "grams": 250
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 18
+      }
+    ],
+    "steps": [
+      "Dice potato and onion. Use cooked chickpeas, rinsed if canned.",
+      "Soften onion and garlic in oil; add tomato and optional curry spices.",
+      "Add potato and enough water to simmer until tender. Stir in chickpeas and heat through.",
+      "Divide into three portions; bread or rice is optional and not included."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "egg-tomato-curry",
+    "name": "Boiled egg curry",
+    "description": "Boiled eggs in onion and tomato gravy.",
+    "image": "curry",
+    "minutes": 25,
+    "servings": 2,
+    "family": "curry",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "egg",
+        "grams": 200
+      },
+      {
+        "food": "tomato",
+        "grams": 250
+      },
+      {
+        "food": "onion",
+        "grams": 120
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Hard-boil four medium eggs until fully set; cool and peel. The recipe uses approximate raw edible egg weights.",
+      "Soften onion and garlic in oil; add chopped tomato and optional curry spices.",
+      "Simmer the sauce with a splash of water, then add peeled eggs and heat through.",
+      "Divide into two servings. Log rice separately if served alongside."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "vegetable-curry",
+    "name": "Potato & broccoli curry",
+    "description": "An easy vegetable curry with tomato and a little oil.",
+    "image": "curry",
+    "minutes": 30,
+    "servings": 3,
+    "family": "curry",
+    "cuisine": "South Asian inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "potato",
+        "grams": 350
+      },
+      {
+        "food": "broccoli",
+        "grams": 350
+      },
+      {
+        "food": "tomato",
+        "grams": 250
+      },
+      {
+        "food": "onion",
+        "grams": 120
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Dice potato and break broccoli into small florets.",
+      "Soften onion and garlic in oil. Add tomato and optional spices.",
+      "Add potato, broccoli and a little water. Cover and cook until tender.",
+      "Divide into three servings; log any rice or bread separately."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "plain-rice-dal",
+    "name": "Rice & lentil bowl",
+    "description": "Warm rice paired with a simple onion lentil sauce.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 2,
+    "family": "rice",
+    "cuisine": "Bangladeshi inspired",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "rice_cooked",
+        "grams": 350
+      },
+      {
+        "food": "lentils",
+        "grams": 300
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 10
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      }
+    ],
+    "steps": [
+      "Use freshly cooked rice or safely refrigerated leftovers and cooked lentils.",
+      "Soften onion and garlic in oil. Add lentils with water and simmer.",
+      "Reheat rice until piping hot and serve with the lentils in two bowls."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "chicken-sandwich",
+    "name": "Chicken & yogurt sandwich",
+    "description": "A lunch sandwich with cooked chicken and a light yogurt dressing.",
+    "image": "sandwich",
+    "minutes": 15,
+    "servings": 2,
+    "family": "bread",
+    "cuisine": "International",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "bread",
+        "grams": 140
+      },
+      {
+        "food": "chicken_cooked",
+        "grams": 180
+      },
+      {
+        "food": "yogurt",
+        "grams": 60
+      },
+      {
+        "food": "lettuce",
+        "grams": 50
+      },
+      {
+        "food": "tomato",
+        "grams": 100
+      },
+      {
+        "food": "lemon",
+        "grams": 10
+      }
+    ],
+    "steps": [
+      "Use safely stored cooked chicken. Shred and mix with yogurt and lemon.",
+      "Slice tomato and wash lettuce. Lightly toast the bread if desired.",
+      "Fill two sandwiches with chicken, lettuce and tomato. Serve promptly."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "cheese-toast",
+    "name": "Tomato cheese toast",
+    "description": "A simple toasted sandwich with tomato and cheddar.",
+    "image": "sandwich",
+    "minutes": 12,
+    "servings": 2,
+    "family": "bread",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "bread",
+        "grams": 140
+      },
+      {
+        "food": "cheddar",
+        "grams": 70
+      },
+      {
+        "food": "tomato",
+        "grams": 120
+      },
+      {
+        "food": "butter",
+        "grams": 10
+      }
+    ],
+    "steps": [
+      "Thinly slice tomato and cheddar. Spread butter over the outside of the bread.",
+      "Fill two sandwiches with tomato and cheese.",
+      "Toast in a skillet until both sides are golden and cheese has melted."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "beef-burger",
+    "name": "Simple beef burger",
+    "description": "Two small burgers with a ground-beef patty, tomato, lettuce and cheese.",
+    "image": "burger",
+    "minutes": 25,
+    "servings": 2,
+    "family": "bread",
+    "cuisine": "International",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "beef",
+        "grams": 250
+      },
+      {
+        "food": "bread",
+        "grams": 140
+      },
+      {
+        "food": "cheddar",
+        "grams": 40
+      },
+      {
+        "food": "tomato",
+        "grams": 100
+      },
+      {
+        "food": "lettuce",
+        "grams": 30
+      },
+      {
+        "food": "onion",
+        "grams": 40
+      },
+      {
+        "food": "olive_oil",
+        "grams": 5
+      }
+    ],
+    "steps": [
+      "Shape 90% lean raw ground beef into two patties. Slice tomato and onion.",
+      "Cook patties in a skillet with oil until the center reaches 71°C / 160°F.",
+      "Toast bread and build burgers with cheese, lettuce and vegetables.",
+      "Nutrition uses whole-wheat bread as a bun proxy; sauces and extra toppings are excluded."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "flatbread-pizza",
+    "name": "Pantry flatbread pizza",
+    "description": "A homemade flour base topped with tomato, cheese and vegetables.",
+    "image": "pizza",
+    "minutes": 40,
+    "servings": 2,
+    "family": "bread",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "flour",
+        "grams": 160
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      },
+      {
+        "food": "tomato",
+        "grams": 200
+      },
+      {
+        "food": "cheddar",
+        "grams": 100
+      },
+      {
+        "food": "pepper",
+        "grams": 80
+      },
+      {
+        "food": "onion",
+        "grams": 60
+      }
+    ],
+    "steps": [
+      "Heat oven to 220°C / 425°F. Mix flour, half the oil and enough water to make a soft dough.",
+      "Roll into two thin bases. Cook chopped tomato and onion briefly in the remaining oil for a thick sauce.",
+      "Top bases with sauce, pepper and cheddar. Bake on a hot tray until the base is fully cooked, about 15–20 minutes.",
+      "Divide into two servings. The simple unleavened base differs from yeast pizza dough."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "mushroom-pasta",
+    "name": "Creamy mushroom pasta",
+    "description": "Pasta with milk, cheese and sautéed mushrooms.",
+    "image": "pasta",
+    "minutes": 25,
+    "servings": 2,
+    "family": "pasta",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "pasta_dry",
+        "grams": 180
+      },
+      {
+        "food": "mushroom",
+        "grams": 200
+      },
+      {
+        "food": "milk",
+        "grams": 180
+      },
+      {
+        "food": "cheddar",
+        "grams": 40
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Boil dry pasta according to its package. Reserve a little cooking water.",
+      "Slice mushrooms and cook in oil with garlic until tender.",
+      "Add milk and simmer gently, then melt in cheddar.",
+      "Toss with drained pasta, loosening with cooking water. Divide between two bowls."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "beef-tomato-pasta",
+    "name": "Beef & tomato pasta",
+    "description": "A quick meat sauce with ground beef and tomatoes.",
+    "image": "pasta",
+    "minutes": 30,
+    "servings": 3,
+    "family": "pasta",
+    "cuisine": "International",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "pasta_dry",
+        "grams": 240
+      },
+      {
+        "food": "beef",
+        "grams": 300
+      },
+      {
+        "food": "tomato",
+        "grams": 400
+      },
+      {
+        "food": "onion",
+        "grams": 120
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Cook dry pasta according to package directions.",
+      "Soften onion and garlic in oil. Add ground beef and cook to 71°C / 160°F.",
+      "Add chopped tomato and simmer 15 minutes.",
+      "Toss sauce with pasta and divide into three servings."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "vegetable-stirfry",
+    "name": "Vegetable rice stir-fry",
+    "description": "A colorful plant-based rice skillet with broccoli and peppers.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 2,
+    "family": "rice",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "rice_cooked",
+        "grams": 350
+      },
+      {
+        "food": "broccoli",
+        "grams": 160
+      },
+      {
+        "food": "pepper",
+        "grams": 120
+      },
+      {
+        "food": "carrot",
+        "grams": 100
+      },
+      {
+        "food": "onion",
+        "grams": 60
+      },
+      {
+        "food": "soy_sauce",
+        "grams": 20
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Chop vegetables into small pieces. Use cooked rice.",
+      "Heat oil and stir-fry onion, carrot, pepper and broccoli with a splash of water until tender.",
+      "Add cooked rice and soy sauce. Stir until everything is piping hot.",
+      "Serve two bowls; tofu or egg may be added and logged separately."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "broccoli-soup",
+    "name": "Broccoli & potato soup",
+    "description": "A smooth vegetable soup with milk for creaminess.",
+    "image": "soup",
+    "minutes": 30,
+    "servings": 3,
+    "family": "stew",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "broccoli",
+        "grams": 400
+      },
+      {
+        "food": "potato",
+        "grams": 250
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "milk",
+        "grams": 250
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      }
+    ],
+    "steps": [
+      "Dice potato and onion, and chop broccoli.",
+      "Soften onion in oil; add potato and water to cover. Simmer until almost tender.",
+      "Add broccoli and cook until soft. Blend carefully, then stir in milk and heat gently.",
+      "Divide into three bowls. Bread is not included."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "tomato-egg-skillet",
+    "name": "Tomato & egg skillet",
+    "description": "Eggs gently cooked in a thick tomato and pepper sauce.",
+    "image": "eggs",
+    "minutes": 25,
+    "servings": 2,
+    "family": "skillet",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "egg",
+        "grams": 200
+      },
+      {
+        "food": "tomato",
+        "grams": 350
+      },
+      {
+        "food": "pepper",
+        "grams": 150
+      },
+      {
+        "food": "onion",
+        "grams": 100
+      },
+      {
+        "food": "olive_oil",
+        "grams": 15
+      },
+      {
+        "food": "garlic",
+        "grams": 8
+      }
+    ],
+    "steps": [
+      "Chop onion, pepper and tomato. Soften onion and garlic in oil.",
+      "Add pepper and tomato, then simmer until the sauce thickens.",
+      "Make wells, add eggs, cover and cook until whites and yolks are fully set.",
+      "Divide into two servings. Bread and optional spices are excluded."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "lemon-fish-rice",
+    "name": "Lemon fish & rice",
+    "description": "Pan-cooked salmon with broccoli and warm rice.",
+    "image": "fish",
+    "minutes": 25,
+    "servings": 2,
+    "family": "fish",
+    "cuisine": "International",
+    "tags": [],
+    "ingredients": [
+      {
+        "food": "salmon",
+        "grams": 300
+      },
+      {
+        "food": "rice_cooked",
+        "grams": 300
+      },
+      {
+        "food": "broccoli",
+        "grams": 200
+      },
+      {
+        "food": "lemon",
+        "grams": 30
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Steam broccoli until tender and reheat cooked rice until piping hot.",
+      "Cook raw salmon in oil until it reaches 63°C / 145°F internally.",
+      "Finish with lemon juice and serve with rice and broccoli in two portions."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "yogurt-fruit-bowl",
+    "name": "Banana yogurt & almond bowl",
+    "description": "A no-cook breakfast or snack with fruit, plain yogurt and almonds.",
+    "image": "breakfast",
+    "minutes": 5,
+    "servings": 2,
+    "family": "breakfast",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "yogurt",
+        "grams": 300
+      },
+      {
+        "food": "banana",
+        "grams": 200
+      },
+      {
+        "food": "apple",
+        "grams": 150
+      },
+      {
+        "food": "almonds",
+        "grams": 25
+      }
+    ],
+    "steps": [
+      "Wash and dice the apple; slice banana.",
+      "Divide plain yogurt between two bowls.",
+      "Add fruit and chopped almonds. Serve immediately."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "apple-oat-porridge",
+    "name": "Apple & oat porridge",
+    "description": "Warm oats simmered with milk and diced apple.",
+    "image": "oats",
+    "minutes": 15,
+    "servings": 2,
+    "family": "breakfast",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian"
+    ],
+    "ingredients": [
+      {
+        "food": "oats",
+        "grams": 100
+      },
+      {
+        "food": "milk",
+        "grams": 350
+      },
+      {
+        "food": "apple",
+        "grams": 200
+      },
+      {
+        "food": "almonds",
+        "grams": 20
+      }
+    ],
+    "steps": [
+      "Dice apple and roughly chop almonds.",
+      "Simmer oats with milk and a splash of water, stirring until soft.",
+      "Add apple and cook a few more minutes. Divide into two bowls and top with almonds."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "cucumber-tomato",
+    "name": "Cucumber tomato salad",
+    "description": "A fresh side with onion, lemon and olive oil.",
+    "image": "salad",
+    "minutes": 10,
+    "servings": 2,
+    "family": "salad",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "cucumber",
+        "grams": 250
+      },
+      {
+        "food": "tomato",
+        "grams": 250
+      },
+      {
+        "food": "onion",
+        "grams": 60
+      },
+      {
+        "food": "lemon",
+        "grams": 20
+      },
+      {
+        "food": "olive_oil",
+        "grams": 12
+      }
+    ],
+    "steps": [
+      "Wash vegetables and slice into bite-size pieces.",
+      "Whisk lemon juice and olive oil.",
+      "Toss vegetables with dressing and divide into two side portions."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+  },
+  {
+    "id": "peanut-chickpea-bowl",
+    "name": "Peanut chickpea rice bowl",
+    "description": "Cooked chickpeas and rice with a simple peanut dressing.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 2,
+    "family": "rice",
+    "cuisine": "International",
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "ingredients": [
+      {
+        "food": "chickpeas",
+        "grams": 250
+      },
+      {
+        "food": "rice_cooked",
+        "grams": 300
+      },
+      {
+        "food": "peanut_butter",
+        "grams": 30
+      },
+      {
+        "food": "soy_sauce",
+        "grams": 15
+      },
+      {
+        "food": "lemon",
+        "grams": 15
+      },
+      {
+        "food": "carrot",
+        "grams": 100
+      },
+      {
+        "food": "cucumber",
+        "grams": 100
+      }
+    ],
+    "steps": [
+      "Use cooked chickpeas and reheat rice until piping hot. Grate carrot and dice cucumber.",
+      "Mix peanut butter, soy sauce, lemon and enough water to make a dressing.",
+      "Arrange rice, chickpeas and vegetables in two bowls. Drizzle with dressing."
+    ],
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
   }
 ]

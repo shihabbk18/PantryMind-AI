@@ -9,22 +9,24 @@
 ## Features
 
 - Select a meal photograph or use a supported mobile browser's camera picker. Photos stay on your device.
-- Upload a food photo: a Food-101 model predicts the probable dish on-device, maps it to likely ingredients with standard serving weights, and calculates initial calories/macros automatically. No recipe dropdown or mandatory edits. Optional edits and serving-size changes recalculate deterministically.
+- Upload a food photo: a browser-based CLIP model predicts the probable dish on-device, maps it to likely ingredients with standard serving weights, and calculates initial calories/macros automatically. No recipe dropdown or mandatory edits. Optional edits and serving-size changes recalculate deterministically.
 - Optional free-text dish correction and manual ingredient entry remain available if the guess is wrong or unsupported.
 - Enter comma-separated ingredient names such as `potato, egg, onion, olive oil`. Quantities are optional. Get pictured ideas, quick steps, and calculated nutrition using standard recipe weights.
 - Get up to three quantity-aware recipe matches with dietary/calorie preferences, cooking instructions, and explicit shortages.
-- Save favorites, pantry items, and meal nutrition summaries in My Kitchen using IndexedDB.
+- Save favorites and pantry items locally. My Food Diary groups meals into breakfast, lunch, dinner and snacks, with editable dates, daily calorie/macro totals and deletion. Add missing recipe ingredients to a persistent grocery checklist.
 - Use core features offline after the first successful visit: the service worker caches application files, recipes, catalog, and photographs.
 
-**Recognition assumptions:** a pinned, free Swin Food-101 classifier runs in a Web Worker using Transformers.js and WASM. First use downloads approximately 93 MB of weights from Hugging Face; no image is uploaded or sent to hosted inference. Supported predicted dishes use authored ingredient/serving heuristics (29 templates), not exact ingredient detection or measured portion mass. Unsupported or low-scoring guesses show an error and retain manual entry. The classifier predicts one dominant dish and cannot reliably reject non-food photos or separate a mixed meal. Model scores are not calibrated probabilities. All nutrition is computed from USDA records. Bundled photographs remain licensed serving suggestions, not newly AI-generated images.
+**Recognition assumptions:** a pinned, free [CLIP ViT-B/32 model](https://huggingface.co/Xenova/clip-vit-base-patch32) runs in a Web Worker using Transformers.js and WASM. First use downloads approximately **154 MB** of q8 text/vision weights from Hugging Face; photos never leave the device and no hosted inference/API key is used. It compares the photo against **46 food descriptions and 8 non-food descriptions**, including biryani, khichuri, dal, curries and mixed plates. Top plausible matches are shown. Weak or nearly tied scores show Unknown Food; likely non-food images receive no automatic nutrition. These checks are heuristic, not calibrated confidence or a general accuracy guarantee.
+
+The leading sufficiently distinct food match selects one of **48 documented serving templates**. Ingredient weights, oils, sauces and composition are authored assumptions, never image measurements. Small/Medium/Large changes scale those assumptions. A mixed-meal template does not segment or identify every component. Search for a dish or edit ingredients when recognition is wrong or unavailable. All nutrition is computed from USDA records. **14 bundled licensed photographs** are illustrative serving suggestions, not newly AI-generated images or exact photographs of every recipe.
 
 ## Try it
 
 1. Open the live website and wait for **Offline ready** before using it without connectivity.
 2. Choose a burger/pizza/food photo and wait for automatic recognition and initial nutrition. Optional edits correct the assumed ingredients and serving size. For a deterministic arithmetic check, manually enter **Rice, cooked, 200 g**: **260 kcal, 5.38 g protein, 56.34 g carbs, 0.56 g fat** before rounding.
-3. Give the meal a name and save it.
+3. Give the meal a name, select Breakfast/Lunch/Dinner/Snacks and a date, and save it to Food Diary. Use My Kitchen to see daily totals, edit or delete entries.
 4. Type `potato, egg, onion, olive oil` and select **What can I cook?** directly. You do not need to supply grams or separately save the names. Open a recipe for full instructions and missing ingredients.
-5. Save a recipe and revisit My Kitchen. Records survive reloads in the same browser and origin.
+5. Save a favorite recipe, or choose **Add missing ingredients**. My Kitchen includes your Food Diary and grocery checklist. Records survive reloads in the same browser and origin.
 
 Supporting browsers can install the site as a PWA or add it to the home screen. This release is a website, not a native Android APK. Camera selection depends on browser/device support; gallery selection remains available.
 
@@ -34,7 +36,7 @@ Requires Node.js 20+ for tests and Python 3 for the example static server. The w
 
 ```sh
 node scripts/build-web.mjs
-node --test tests/core.test.mjs
+node --test tests/*.test.mjs
 python -m http.server 8010 --bind 127.0.0.1 --directory web
 ```
 
@@ -61,13 +63,13 @@ The importer matches exact source descriptions and rejects missing nutrient valu
 
 ## Recommendation method
 
-The 14 authored recipe templates have explicit weights, servings, times, and instructions. For names-only entries, presence counts as ingredient availability, with quantities explicitly unknown. Raw chicken, dry rice, and dry pasta may be cooked for the corresponding recipe; no mass conversion is inferred. For optional measured stock, ingredient coverage is `min(available grams / required grams, 1)`. The score is the mean coverage across distinct ingredients; duplicate amounts are aggregated. Recipes with zero overlap are excluded.
+The 40 authored recipe templates have explicit weights, servings, times, and instructions. For names-only entries, presence counts as ingredient availability, with quantities explicitly unknown. Raw chicken, dry rice, and dry pasta may be cooked for the corresponding recipe; no mass conversion is inferred. For optional measured stock, ingredient coverage is `min(available grams / required grams, 1)`. The score is the mean coverage across distinct ingredients; duplicate amounts are aggregated. Recipes with zero overlap are excluded.
 
-Sort by coverage descending, shortage count ascending, preparation time ascending, then stable ID. Calorie preferences filter calculated per-serving energy. Each suggestion independently uses the pantry; suggestions do not jointly reserve inventory. Partial matches include a shopping list and do not imply everything is available. Dietary tags are recipe metadata, not allergy guarantees.
+First sort by coverage descending, shortage count ascending, preparation time ascending, then stable ID. Select three varied recommendations greedily: penalize up to 0.22 for ingredient-set Jaccard similarity to a previously selected dish, plus 0.08 for a repeated recipe family. These are disclosed UX heuristics, not learned parameters or claims of optimality. Calorie preferences filter calculated per-serving energy. Each suggestion independently uses the pantry; suggestions do not jointly reserve inventory. Partial matches include a shopping list and do not imply everything is available. Dietary tags are recipe metadata, not allergy guarantees.
 
 ## Privacy and storage
 
-IndexedDB stores pantry, favorites, and meals; photos are resized locally before saving. Personal records and photos are not sent to a backend. GitHub Pages receives ordinary requests for public files on the initial visit. There are no accounts, cloud backup, synchronization, or analytics integrations. Clearing site data, storage eviction, private browsing expiration, or changing browsers can remove/separate records. Unsaved meal edits are session-only.
+IndexedDB version 2 preserves version 1 pantry, favorites and meals and adds groceries; photos are resized locally before saving. Personal records and photos are not sent to a backend. GitHub Pages receives ordinary requests for public files on the initial visit. There are no accounts, cloud backup, synchronization, or analytics integrations. Clearing site data, storage eviction, private browsing expiration, or changing browsers can remove/separate records. Unsaved meal edits are session-only. Diary totals use the selected local calendar date; legacy entries use their creation date and default to Snacks when edited. Grocery amounts aggregate shortages across selected recipes, with one contribution per recipe so repeated clicks do not inflate them. Checking a grocery item does not silently change pantry stock.
 
 ## Structure and deployment
 
@@ -83,7 +85,7 @@ tests/               Node test suite
 
 The proposed Android/backend architecture was replaced by a static website at the user's request. Nutrition runs deterministically in JavaScript, requiring no Python hosting or internet connection for core use.
 
-GitHub Actions tests and publishes web/ on pushes to main. Set Pages build source to **GitHub Actions**. Relative paths support repository-path hosting. Bump the cache version in web/sw.js when changing cached files.
+GitHub Actions tests and publishes web/ on pushes to main. Set Pages build source to **GitHub Actions**. Relative paths support repository-path hosting. Bump the cache version in web/sw.js when changing cached files. Cache installation requests fresh files to avoid stale catalogs; reload after an update finishes. The production preparation script validates all recipe ingredients, serving templates, pictures and offline assets before deployment.
 
 See [VALIDATION.md](VALIDATION.md) for executed tests and remaining checks. No project-level classifier accuracy, portion measurement accuracy, AI performance improvement, native APK, or physical-device camera verification is claimed. First recognition needs internet; cached weights can be evicted. Manual nutrition and pantry features remain usable without the model. CPU inference can take tens of seconds on slower devices.
 

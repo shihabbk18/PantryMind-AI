@@ -1,48 +1,29 @@
-# Current fix validation
+# PantryMind Web 2.0 validation
 
-4 October 2026. The existing website and GitHub Pages pipeline were patched, not rebuilt.
+4 October 2026. Targeted changes preserve the static JavaScript architecture, USDA catalog, original UI, IndexedDB records, PWA and GitHub Pages workflow. No backend, paid API or Android project was added.
 
-## Automated checks
+## Executed automated checks
 
-`node --test tests/core.test.mjs tests/flows.test.mjs`: 19 meaningful checks cover USDA arithmetic, raw/cooked forms, invalid inputs, source consistency, pantry shortages, deterministic ranking, serving scaling, unsupported/low-score model outputs, names-only parsing, aliases, duplicate names, optional measured stock, raw ingredients used in cooked recipes, and offline asset existence.
+`node --test tests/*.test.mjs`: **28 passed, 0 failed**. Tests cover USDA arithmetic, unknown/invalid inputs, raw/cooked forms, all recipe and image references, all 46 classifier candidates and serving templates, weak/ambiguous/non-food policies, deterministic diverse ranking, dietary/calorie filters, diary date/category validation and edit arithmetic, legacy dates, grocery shortage aggregation and idempotent additions.
 
-## Actual browser checks
+`node scripts/build-web.mjs`: passed. Production preparation validates **50 USDA foods, 40 recipes, 48 serving templates and 37 offline assets**. JavaScript syntax checks passed for app, kitchen helpers and worker.
 
-- Uploaded a licensed burger photograph; the real Food-101 classifier predicted hamburger. Initial nutrition appeared automatically: 540 kcal, 39.3 g protein, 34.0 g carbs, 26.9 g fat from the declared ingredient assumptions.
-- Uploaded a different pizza photograph; the classifier predicted pizza. Initial nutrition: 444 kcal, 17.2 g protein, 53.0 g carbs, 17.7 g fat using the two-slice assumption. These are template estimates, not measured photo nutrition.
-- Tested worker-based recognition with the actual burger photo again; the same result appeared without mandatory edits or a recipe dropdown.
-- Entered potato, egg, onion, olive oil without weights. Three pictured ideas appeared: Spanish-style omelette, potato/egg tomato stew, rustic potato/egg skillet. Standard recipe macros and short instructions were shown.
-- Existing locally saved pantry, favorite, and meal records remained readable after the patch. No IndexedDB schema change was needed.
+## Actual Chromium browser workflows
 
-## Limitations
+| Workflow | Observed result |
+|---|---|
+| A: real burger photograph | CLIP Burger led at rounded 72% relative score; automatic 540 kcal, 39.3 g protein, 34.0 g carbs, 26.9 g fat. |
+| B: real pizza photograph | Pizza led at 67%; automatic 444 kcal, 17.2 g protein, 53.0 g carbs, 17.7 g fat. |
+| C: real rice photograph | Plain rice led at 49%; automatic 260 kcal, 5.4 g protein, 56.3 g carbs, 0.6 g fat. |
+| D: tiger photograph | Animal led at rounded 100%; non-food message and blank nutrition, no invented meal estimate. |
+| E: names-only pantry | Potato, egg, onion, olive oil produced dim bhaji, aloo bhorta and Spanish-style potato omelette from the full 40-recipe release. Pictures, steps and computed per-serving macros appeared. A 300 kcal minimum instead returned omelette, potato/egg tomato stew and potato/egg skillet. |
+| F: diary save/reload | Saved the scanned Pizza as Dinner. After reload, its category and 444 kcal daily total persisted. |
+| G: groceries | Adding the tomato shortage twice kept it at 180 g for one recipe rather than duplicating it. |
 
-Photo tests demonstrate two actual inference calls, not a general accuracy benchmark. The model chooses one dominant Food-101 dish; exact portion mass, hidden ingredients, non-food rejection, and mixed-meal segmentation are unverified or unsupported. 29 ingredient templates cover common dishes; unsupported classes show an explicit failure rather than fake nutrition. The first model download needs internet and about 93 MB, plus the bundled runtime. Browser cache can be evicted. CPU inference can take tens of seconds. Physical-device camera testing remains unverified. Recipe pictures are licensed bundled illustrations, not generated images.
+These are real inference calls and arithmetic estimates, not a nutrition ground-truth or general classifier accuracy benchmark. Fixtures: bundled licensed burger/pizza/rice photographs; tiger from the CLIP model card's Transformers.js example (test-only, not distributed). No filename-based classification was used.
 
-## Earlier verified baseline
+## Limits
 
-# Executed validation
+CLIP compares only bundled descriptions; it cannot measure portions, verify hidden ingredients or segment a mixed plate. Non-food and uncertainty thresholds are heuristic. Bangladeshi labels are supported candidates, without a claim of validated accuracy for every dish. First recognition needs internet and roughly 154 MB of weights plus the bundled runtime; later operation depends on browser cache retention and device memory. Manual search and deterministic nutrition remain available if inference fails. Recipe images illustrate dish families and may differ from the exact recipe. Camera capture and PWA installation on a physical phone remain unverified; no physical device is available. Local browser storage is not cloud backup.
 
-Validated on 4 October 2026 using Node.js and the Codex in-app Chromium browser.
-
-## Automated checks
-
-`node --test tests/core.test.mjs`: **12 passed, 0 failed.** Covers USDA arithmetic, explicitly entered oil, invalid/unknown ingredients, raw/cooked separation, catalog and recipe consistency, exact coverage, insufficient quantities, duplicates, diet/calorie filtering, deterministic ranking, per-serving nutrition, egg conversion, and cache asset existence.
-
-## Browser checks
-
-- 200 g cooked rice displayed 260 kcal, 5.4 g protein, 56.3 g carbs, 0.6 g fat.
-- Saved Verified rice lunch and read it in My Kitchen.
-- Saved cooked rice 350 g, raw egg 100 g, olive oil 30 g to the pantry.
-- Three recommendations appeared with computed per-serving macros and shortage counts.
-- Egg fried rice details correctly listed carrot 80 g, peas 80 g, onion 60 g, soy sauce 15 g missing; rice, eggs, and oil available.
-- Saved a favorite, reloaded, and verified pantry, favorite, and meal persistence.
-- Selected an actual local JPEG through the browser chooser; it decoded and displayed with manual-confirmation guidance.
-- Stopped the local HTTP server, reloaded, and opened My Kitchen: application, recipe images, catalog, and saved records remained available.
-
-## Public deployment
-
-GitHub Actions [run 37155276074](https://github.com/shihabbk18/PantryMind-AI/actions/runs/37155276074) completed successfully for commit e276b00. The live HTTPS website loaded its catalog, registered its service worker, and calculated 200 g cooked rice correctly. The deployed interface was inspected at desktop width; local browser checks also covered the narrow mobile layout. A screenshot is included in docs/website.png.
-
-## Remaining checks
-
-No physical Android/iOS camera or device was available. File selection was tested on desktop. Automatic recognition and image generation are absent. Browser storage can be cleared/evicted; no cloud backup exists. Public deployment is verified separately through GitHub Actions and the live page.
+Public deployment verification and final responsive/persistence checks are recorded after publication below.

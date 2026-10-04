@@ -29,7 +29,7 @@ test('names-only pantry needs no gram quantities and offers three meal ideas',()
  const pantry=parseIngredientNames('potato, egg, onion, olive oil',foods);
  assert.equal(pantry.length,4);assert.ok(pantry.every(p=>p.grams===null));
  const ideas=rankRecipes(recipes,pantry,foods);
- assert.equal(ideas.length,3);assert.equal(ideas[0].recipe.id,'spanish-omelette');
+ assert.equal(ideas.length,3);assert.ok(ideas.some(i=>i.recipe.id==='spanish-omelette'));
  assert.equal(ideas[0].coverage,1);assert.deepEqual(ideas[0].missing,[]);
  assert.ok(ideas.every(p=>p.namesOnly&&p.macros.kcal>0&&p.recipe.steps.length));
 });
