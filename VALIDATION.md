@@ -12,7 +12,9 @@ Automated pantry cases: A returns potato omelette, potato/egg skillet and aloo b
 
 Photographs: 17 licensed local assets, including actual banana pancakes and a credited potato omelette; photos remain serving illustrations and can differ from a recipe's optional garnishes. No paid image generation was introduced. All 43 recipes have validated essential/optional metadata and usable licensed image references.
 
-A real tiger photograph produced a non-food warning and blank nutrition. Local browser pantry query flour/banana/milk/egg returned only four-ingredient banana pancakes (379 kcal per serving), despite unrelated saved stock. Public deployment verification is recorded after publication.
+A real tiger photograph produced a non-food warning and blank nutrition. Local browser pantry query flour/banana/milk/egg returned only four-ingredient banana pancakes (379 kcal per serving), despite unrelated saved stock. Public application commit `95de7626de769bd15cd3432543a894134e9d4d08` deployed successfully in [GitHub Actions run 37209564352](https://github.com/shihabbk18/PantryMind-AI/actions/runs/37209564352). Verified the published browser at https://shihabbk18.github.io/PantryMind-AI/: A returned the three ready potato meals with separate missing-essential recipes; F switched to chicken/rice without mixing saved potato stock; C returned only pancakes; D returned only plain rice. The public scanner actually inferred Burger at 72% and automatically calculated the same 540 kcal / 39.3 g protein / 34.0 g carbs / 26.9 g fat. Existing pantry, diary, favorite and grocery records remained readable.
+
+At a 390 × 844 viewport, document width was 375 px excluding the scrollbar, with no horizontal overflow. The three visible ready-recipe photographs loaded successfully, including the new potato omelette. Below-screen images use lazy loading. Physical-device camera/PWA installation remains unverified. [Published pantry repair screenshot](docs/pantry-repair.png).
 
 ---
 
