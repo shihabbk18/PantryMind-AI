@@ -503,6 +503,36 @@
       "protein": 0.0,
       "carbs": 0.0,
       "fat": 0.0
+    },
+    {
+      "id": "cilantro",
+      "name": "Coriander / cilantro leaves, raw",
+      "fdc_id": 169997,
+      "source_description": "Coriander (cilantro) leaves, raw",
+      "kcal": 23.0,
+      "protein": 2.13,
+      "carbs": 3.67,
+      "fat": 0.52
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant / brinjal, raw",
+      "fdc_id": 169228,
+      "source_description": "Eggplant, raw",
+      "kcal": 25.0,
+      "protein": 0.98,
+      "carbs": 5.88,
+      "fat": 0.18
+    },
+    {
+      "id": "chili",
+      "name": "Red chili / chilli, raw",
+      "fdc_id": 170106,
+      "source_description": "Peppers, hot chili, red, raw",
+      "kcal": 40.0,
+      "protein": 1.87,
+      "carbs": 8.81,
+      "fat": 0.44
     }
   ]
 }

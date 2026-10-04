@@ -46,7 +46,7 @@ Open `http://127.0.0.1:8010/`. Serve files over HTTP rather than opening index.h
 
 ## Nutrition and provenance
 
-The catalog contains **50 common ingredients** extracted from USDA FoodData Central **SR Legacy April 2018** CSVs. Each record preserves its FDC ID, exact source description, and energy/macronutrients per 100 g. Raw and cooked forms are distinct.
+The catalog contains **53 common ingredients** extracted from USDA FoodData Central **SR Legacy April 2018** CSVs. Each record preserves its FDC ID, exact source description, and energy/macronutrients per 100 g. Raw and cooked forms are distinct.
 
 For each nutrient, sum `ingredient grams / 100 × value per 100 g`. Recipe totals are divided by declared servings. Energy uses USDA values directly; the chart uses approximate 4/4/9 macro energy factors, which can differ from reported calories.
 
@@ -65,9 +65,11 @@ The importer matches exact source descriptions and rejects missing nutrient valu
 
 ## Recommendation method
 
-The 40 authored recipe templates have explicit weights, servings, times, and instructions. For names-only entries, presence counts as ingredient availability, with quantities explicitly unknown. Raw chicken, dry rice, and dry pasta may be cooked for the corresponding recipe; no mass conversion is inferred. For optional measured stock, ingredient coverage is `min(available grams / required grams, 1)`. The score is the mean coverage across distinct ingredients; duplicate amounts are aggregated. Recipes with zero overlap are excluded.
+The 43 authored recipes explicitly separate essential and optional ingredients. A recipe is **Ready to cook** only when every essential ingredient is present in sufficient quantity. Names-only stock means presence is known and quantity is assumed. Missing optionals are omitted from the calculated nutrition and grocery list. Salt, water and optional seasonings are not nutritional ingredient entries; no substantial pantry ingredients are assumed.
 
-First sort by coverage descending, shortage count ascending, preparation time ascending, then stable ID. Select three varied recommendations greedily: penalize up to 0.22 for ingredient-set Jaccard similarity to a previously selected dish, plus 0.08 for a repeated recipe family. These are disclosed UX heuristics, not learned parameters or claims of optimality. Calorie preferences filter calculated per-serving energy. Each suggestion independently uses the pantry; suggestions do not jointly reserve inventory. Partial matches include a shopping list and do not imply everything is available. Dietary tags are recipe metadata, not allergy guarantees.
+Nonblank typed ingredient searches use **only that list**, without appending saved pantry items. Blank searches use saved stock. This repairs the previous contamination of subsequent searches. Raw chicken, dry rice and dry pasta may be cooked for names-only recipes; measured weights are never silently converted.
+
+Ready recipes rank by essential coverage, selected pantry use, optional availability, time and ID. Up to three varied ready dishes are shown. A separate **Almost possible** group contains at most three recipes with at least 50% essential quantity coverage and at most two missing essentials. Missing amounts are explicit; their nutrition assumes those essentials are obtained. No unrelated recipes fill empty slots. Diversity uses ingredient-set Jaccard penalties (0.12) and repeated-family penalties (0.04), with pantry-use (0.4) and optional-availability (0.02) bonuses. These are deterministic UX heuristics, not learned weights or optimization guarantees. Calorie and dietary filters remain available. Suggestions do not jointly reserve inventory; dietary tags are not allergy guarantees.
 
 ## Privacy and storage
 
@@ -92,3 +94,7 @@ GitHub Actions tests and publishes web/ on pushes to main. Set Pages build sourc
 See [VALIDATION.md](VALIDATION.md) for executed tests and remaining checks. No project-level classifier accuracy, portion measurement accuracy, AI performance improvement, native APK, or physical-device camera verification is claimed. First recognition needs internet; cached weights can be evicted. Manual nutrition and pantry features remain usable without the model. CPU inference can take tens of seconds on slower devices.
 
 Code and original recipes: MIT. Photographs retain the Unsplash license; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Intelligence repair
+
+CLIP still runs actual image inference locally. More descriptive rice/curry prompts distinguish component arrangements; no accuracy improvement is claimed from a prompt change alone. Close candidates within a rice, pasta or egg family may produce an explicitly provisional estimate when food evidence is strong; cross-family ambiguity and weak/non-food evidence retain the manual fallback. Top alternatives remain selectable. The classifier infers dish identity only: every listed ingredient and gram weight is a labeled recipe-template assumption. Small/Medium/Large scales assumed serving weights by 0.5/1/1.5 and recalculates locally. User edits are marked separately. Hidden oils, meat cuts and mixed components cannot be verified from one photo.

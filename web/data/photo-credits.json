@@ -110,5 +110,30 @@
     "license": "Unsplash License",
     "license_url": "https://unsplash.com/license",
     "usage": "Bundled serving suggestion; not AI generated or a photo of the user's food."
+  },
+  {
+    "file": "images/pancakes.jpg",
+    "source": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=82",
+    "source_page": null,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "usage": "Bundled serving suggestion; not AI generated or a photo of the user's food."
+  },
+  {
+    "file": "images/omelette.jpg",
+    "source": "https://images.unsplash.com/photo-1563690449029-d6e1b8d6003d?auto=format&fit=crop&w=1000&q=82",
+    "source_page": null,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "usage": "Bundled serving suggestion; not AI generated or a photo of the user's food."
+  },
+  {
+    "file": "images/spanish-omelette.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tortilla_Espa%C3%B1ola_%28Spanish_Potato_Omelet%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tortilla_Espa%C3%B1ola_(Spanish_Potato_Omelet).jpg",
+    "author": "Joy (joyosity)",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "usage": "Unmodified photograph; displayed with CSS crop as a serving suggestion."
   }
 ]

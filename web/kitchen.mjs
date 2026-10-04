@@ -1,4 +1,4 @@
-import {nutrients,zero,calculateNutrition,pantryInventory} from './core.mjs';
+import {nutrients,zero,calculateNutrition,pantryInventory,recipeRequirements} from './core.mjs';
 export const MEAL_CATEGORIES=['breakfast','lunch','dinner','snacks'];
 export function localDate(date=new Date()){
  if(Number.isNaN(date.getTime()))throw new Error('Invalid meal date.');
@@ -24,7 +24,7 @@ export function makeMeal({id,name,date,category,portions,photo=null,createdAt},f
 }
 export function recipeShortages(recipe,pantry,foods){
  const inventory=pantryInventory(pantry,foods),required=new Map();
- for(const p of recipe.ingredients)required.set(p.food,(required.get(p.food)||0)+p.grams);
+ const {essential}=recipeRequirements(recipe);for(const p of recipe.ingredients)if(essential.has(p.food))required.set(p.food,(required.get(p.food)||0)+p.grams);
  return [...required].filter(([food,grams])=>(inventory.get(food)||0)<grams).map(([food,grams])=>({food,grams:grams-(inventory.get(food)||0)}));
 }
 export function mergeGroceries(existing,recipe,pantry,foods){
@@ -40,7 +40,7 @@ export function mergeGroceries(existing,recipe,pantry,foods){
 export function variedRecommendations(matches,limit=3){
  const pool=[...matches],selected=[];
  while(pool.length&&selected.length<limit){
-  const score=m=>{let penalty=0;for(const other of selected){const a=new Set(m.recipe.ingredients.map(p=>p.food)),b=new Set(other.recipe.ingredients.map(p=>p.food));const intersection=[...a].filter(f=>b.has(f)).length,union=new Set([...a,...b]).size;penalty=Math.max(penalty,intersection/union*.22+(m.recipe.family&&m.recipe.family===other.recipe.family? .08:0));}return m.coverage-penalty;};
+  const score=m=>{let penalty=0;for(const other of selected){const a=new Set(m.recipe.ingredients.map(p=>p.food)),b=new Set(other.recipe.ingredients.map(p=>p.food));const intersection=[...a].filter(f=>b.has(f)).length,union=new Set([...a,...b]).size;penalty=Math.max(penalty,intersection/union*.12+(m.recipe.family&&m.recipe.family===other.recipe.family? .04:0));}return m.coverage+(m.pantryUse||0)*.4+(m.optionalAvailable||0)*.02-penalty;};
   pool.sort((a,b)=>score(b)-score(a)||a.missing.length-b.missing.length||a.recipe.minutes-b.recipe.minutes||a.recipe.id.localeCompare(b.recipe.id));selected.push(pool.shift());
  }
  return selected;

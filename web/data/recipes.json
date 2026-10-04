@@ -40,13 +40,24 @@
       }
     ],
     "steps": [
-      "Chop the onion and carrot. Beat the eggs in a bowl.",
-      "Heat the oil in a skillet. Cook the onion and carrot until softened, then add the peas.",
-      "Push vegetables to one side. Add the eggs and scramble until fully set.",
-      "Add the cooked rice and soy sauce. Stir until everything is piping hot. Serve immediately."
+      "Beat the eggs. Chop any available optional onion/carrot.",
+      "Heat oil in a skillet. Cook any optional vegetables you have until tender; skip missing ones.",
+      "Add eggs and scramble until fully set.",
+      "Stir in cooked rice until piping hot. Add optional soy sauce only if available. Divide into two servings."
     ],
     "family": "rice",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "carrot",
+      "peas",
+      "onion",
+      "soy_sauce"
+    ],
+    "essentialIngredients": [
+      "rice_cooked",
+      "egg",
+      "olive_oil"
+    ]
   },
   {
     "id": "chicken-rice",
@@ -87,13 +98,24 @@
       }
     ],
     "steps": [
-      "Cut the chicken into bite-size pieces. Chop the vegetables.",
-      "Heat the oil and cook the chicken with garlic until it reaches 74°C / 165°F internally.",
-      "Add the broccoli and carrot with a splash of water and cook until tender.",
-      "Reheat the cooked rice until piping hot. Divide into bowls and top with chicken, vegetables, and lemon juice."
+      "Cut raw chicken into bite-size pieces and chop garlic.",
+      "Cook chicken with garlic in oil until it reaches 74°C / 165°F internally.",
+      "Add broccoli/carrot only if available; cook with a splash of water until tender.",
+      "Reheat cooked rice until piping hot. Divide into two bowls, adding lemon only if available."
     ],
     "family": "rice",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "broccoli",
+      "carrot",
+      "lemon"
+    ],
+    "essentialIngredients": [
+      "chicken_raw",
+      "rice_cooked",
+      "olive_oil",
+      "garlic"
+    ]
   },
   {
     "id": "tomato-pasta",
@@ -130,12 +152,21 @@
     ],
     "steps": [
       "Boil the pasta in water according to its package directions.",
-      "Chop tomatoes and onion. Gently cook the onion and garlic in olive oil.",
+      "Chop tomatoes and garlic. Gently cook garlic in olive oil; add onion only if available.",
       "Add the tomatoes and simmer for 12–15 minutes, stirring occasionally.",
       "Drain the pasta, saving a little cooking water. Toss with the sauce, loosening with cooking water if needed."
     ],
     "family": "pasta",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "onion"
+    ],
+    "essentialIngredients": [
+      "pasta_dry",
+      "tomato",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "chickpea-salad",
@@ -181,13 +212,22 @@
       "Toss everything together and divide between two bowls."
     ],
     "family": "salad",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "chickpeas",
+      "cucumber",
+      "tomato",
+      "onion",
+      "olive_oil",
+      "lemon"
+    ]
   },
   {
     "id": "spinach-omelet",
     "name": "Spinach & mushroom omelet",
     "description": "A protein-rich breakfast with soft vegetables and a golden egg fold.",
-    "image": "eggs",
+    "image": "omelette",
     "minutes": 15,
     "servings": 1,
     "tags": [
@@ -219,10 +259,19 @@
       "Slice the mushrooms and wash the spinach. Beat the eggs.",
       "Heat oil in a non-stick skillet and cook the mushrooms. Add spinach until wilted.",
       "Pour in the eggs and cook gently until set, lifting the edges so uncooked egg reaches the pan.",
-      "Sprinkle with cheese, fold, and cook until no liquid egg remains."
+      "If cheddar is available, sprinkle it over the eggs. Fold and cook until no liquid egg remains."
     ],
     "family": "egg",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "cheddar"
+    ],
+    "essentialIngredients": [
+      "egg",
+      "spinach",
+      "mushroom",
+      "olive_oil"
+    ]
   },
   {
     "id": "lentil-bowl",
@@ -268,7 +317,16 @@
       "Combine lentils and vegetables. Finish with lemon juice and divide between two bowls."
     ],
     "family": "salad",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "lentils",
+      "carrot",
+      "pepper",
+      "onion",
+      "olive_oil",
+      "lemon"
+    ]
   },
   {
     "id": "banana-oats",
@@ -309,13 +367,21 @@
       "Stir the oats and add the banana and almonds before serving."
     ],
     "family": "breakfast",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "oats",
+      "milk",
+      "yogurt",
+      "banana",
+      "almonds"
+    ]
   },
   {
     "id": "potato-egg",
     "name": "Rustic potato & egg skillet",
     "description": "Golden potatoes, sweet onion, and eggs in a simple one-pan meal.",
-    "image": "eggs",
+    "image": "omelette",
     "minutes": 30,
     "servings": 2,
     "tags": [
@@ -346,11 +412,20 @@
     "steps": [
       "Dice the potatoes and onion. Parboil potatoes for 5–7 minutes, then drain.",
       "Heat olive oil in a skillet and fry the potato and onion until golden and tender.",
-      "Add chopped tomatoes and cook for a few minutes.",
+      "If tomato is available, add it chopped and cook for a few minutes; otherwise skip it.",
       "Make small wells and add eggs. Cover and cook until whites and yolks are fully set."
     ],
     "family": "skillet",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "tomato"
+    ],
+    "essentialIngredients": [
+      "potato",
+      "egg",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "tofu-rice",
@@ -396,7 +471,16 @@
       "Add soy sauce. Reheat cooked rice until piping hot and serve with the tofu and broccoli."
     ],
     "family": "rice",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "tofu",
+      "rice_cooked",
+      "broccoli",
+      "soy_sauce",
+      "olive_oil",
+      "garlic"
+    ]
   },
   {
     "id": "tuna-pasta",
@@ -439,7 +523,16 @@
       "Combine all ingredients. Serve promptly or refrigerate in a covered container."
     ],
     "family": "pasta",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "pasta_dry",
+      "tuna",
+      "corn",
+      "cucumber",
+      "yogurt",
+      "lemon"
+    ]
   },
   {
     "id": "bean-chili",
@@ -485,7 +578,16 @@
       "Add the cooked beans and heat thoroughly. Serve in bowls; season to taste and log any extra ingredients separately."
     ],
     "family": "stew",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "kidney_beans",
+      "tomato",
+      "onion",
+      "pepper",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "avocado-toast",
@@ -526,13 +628,21 @@
       "Spread avocado on toast and top with the egg. Add any extras to your nutrition log."
     ],
     "family": "bread",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "bread",
+      "avocado",
+      "egg",
+      "lemon",
+      "olive_oil"
+    ]
   },
   {
     "id": "spanish-omelette",
     "name": "Spanish-style potato omelette",
     "description": "Tender potatoes and onion folded into a simple egg omelette.",
-    "image": "eggs",
+    "image": "spanish-omelette",
     "minutes": 25,
     "servings": 2,
     "tags": [
@@ -562,7 +672,14 @@
       "Cook gently until the eggs are fully set, flipping carefully or finishing under a grill. Divide into two servings."
     ],
     "family": "egg",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "potato",
+      "egg",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "potato-egg-curry",
@@ -602,7 +719,15 @@
       "Crack in the eggs, cover, and cook until whites and yolks are fully set. Divide into two servings."
     ],
     "family": "curry",
-    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph."
+    "notes": "Standard ingredient weights for the whole recipe; raw/cooked forms follow the nutrition catalog. Optional spices, salt and other extras are not included. Photo is an illustrative serving suggestion, not an exact recipe photograph. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "potato",
+      "egg",
+      "onion",
+      "olive_oil",
+      "tomato"
+    ]
   },
   {
     "id": "chicken-biryani",
@@ -646,7 +771,16 @@
       "Cook the rice separately according to its package, then layer with chicken. Cover over low heat for 8 minutes.",
       "Rest briefly, mix gently and divide into three servings. Optional spices are not included in nutrition."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "chicken_raw",
+      "rice_dry",
+      "onion",
+      "yogurt",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "vegetable-khichuri",
@@ -697,7 +831,17 @@
       "Simmer covered until the rice and potato are tender; stir in cooked lentils and extra hot water for a soft consistency.",
       "Heat thoroughly and divide into three portions. Add turmeric or cumin only if available; these are optional extras."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "rice_dry",
+      "lentils",
+      "potato",
+      "carrot",
+      "onion",
+      "olive_oil",
+      "garlic"
+    ]
   },
   {
     "id": "simple-dal",
@@ -740,7 +884,15 @@
       "Add lentils and a little water; simmer 10 minutes. Optional cumin or turmeric may be added separately.",
       "Serve two bowls. Rice or bread is not included in this estimate."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "lentils",
+      "onion",
+      "garlic",
+      "olive_oil",
+      "tomato"
+    ]
   },
   {
     "id": "aloo-bhorta",
@@ -775,7 +927,13 @@
       "Mash potato with onion and oil. Divide into two side portions.",
       "Traditional mustard oil and chili are optional; this catalog estimate uses olive oil and excludes extras."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "potato",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "dim-bhaji",
@@ -808,7 +966,13 @@
       "Soften onion in oil in a skillet. Add optional chili only if available.",
       "Pour in eggs and stir until completely set. Divide into two servings."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "egg",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "chicken-curry",
@@ -852,7 +1016,16 @@
       "Add tomato, yogurt and a splash of water. Simmer until chicken reaches 74°C / 165°F internally.",
       "Divide into three portions. Rice and optional spices are not included."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "chicken_raw",
+      "tomato",
+      "onion",
+      "garlic",
+      "yogurt",
+      "olive_oil"
+    ]
   },
   {
     "id": "fish-curry",
@@ -892,7 +1065,15 @@
       "Add fish and a little water. Cover and simmer gently until fish reaches 63°C / 145°F.",
       "Divide into two servings. Using another fish changes nutrition; update the ingredients if needed."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "salmon",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "beef-potato-curry",
@@ -936,7 +1117,16 @@
       "Add potato, tomato, optional curry spices and water. Cover and simmer until potatoes are tender.",
       "Divide into three servings. This quick version uses ground beef rather than slow-cooked chunks."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "beef",
+      "potato",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "chana-potato",
@@ -983,7 +1173,16 @@
       "Add potato and enough water to simmer until tender. Stir in chickpeas and heat through.",
       "Divide into three portions; bread or rice is optional and not included."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "chickpeas",
+      "potato",
+      "onion",
+      "tomato",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "egg-tomato-curry",
@@ -1025,7 +1224,15 @@
       "Simmer the sauce with a splash of water, then add peeled eggs and heat through.",
       "Divide into two servings. Log rice separately if served alongside."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "egg",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "vegetable-curry",
@@ -1072,7 +1279,16 @@
       "Add potato, broccoli and a little water. Cover and cook until tender.",
       "Divide into three servings; log any rice or bread separately."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "potato",
+      "broccoli",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "plain-rice-dal",
@@ -1111,10 +1327,19 @@
     ],
     "steps": [
       "Use freshly cooked rice or safely refrigerated leftovers and cooked lentils.",
-      "Soften onion and garlic in oil. Add lentils with water and simmer.",
+      "Soften onion in oil; add garlic only if available. Add cooked lentils with water and simmer.",
       "Reheat rice until piping hot and serve with the lentils in two bowls."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [
+      "garlic"
+    ],
+    "essentialIngredients": [
+      "rice_cooked",
+      "lentils",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "chicken-sandwich",
@@ -1157,7 +1382,16 @@
       "Slice tomato and wash lettuce. Lightly toast the bread if desired.",
       "Fill two sandwiches with chicken, lettuce and tomato. Serve promptly."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "bread",
+      "chicken_cooked",
+      "yogurt",
+      "lettuce",
+      "tomato",
+      "lemon"
+    ]
   },
   {
     "id": "cheese-toast",
@@ -1194,7 +1428,14 @@
       "Fill two sandwiches with tomato and cheese.",
       "Toast in a skillet until both sides are golden and cheese has melted."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "bread",
+      "cheddar",
+      "tomato",
+      "butter"
+    ]
   },
   {
     "id": "beef-burger",
@@ -1242,7 +1483,17 @@
       "Toast bread and build burgers with cheese, lettuce and vegetables.",
       "Nutrition uses whole-wheat bread as a bun proxy; sauces and extra toppings are excluded."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "beef",
+      "bread",
+      "cheddar",
+      "tomato",
+      "lettuce",
+      "onion",
+      "olive_oil"
+    ]
   },
   {
     "id": "flatbread-pizza",
@@ -1288,7 +1539,16 @@
       "Top bases with sauce, pepper and cheddar. Bake on a hot tray until the base is fully cooked, about 15–20 minutes.",
       "Divide into two servings. The simple unleavened base differs from yeast pizza dough."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "flour",
+      "olive_oil",
+      "tomato",
+      "cheddar",
+      "pepper",
+      "onion"
+    ]
   },
   {
     "id": "mushroom-pasta",
@@ -1334,7 +1594,16 @@
       "Add milk and simmer gently, then melt in cheddar.",
       "Toss with drained pasta, loosening with cooking water. Divide between two bowls."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "pasta_dry",
+      "mushroom",
+      "milk",
+      "cheddar",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "beef-tomato-pasta",
@@ -1378,7 +1647,16 @@
       "Add chopped tomato and simmer 15 minutes.",
       "Toss sauce with pasta and divide into three servings."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "pasta_dry",
+      "beef",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive_oil"
+    ]
   },
   {
     "id": "vegetable-stirfry",
@@ -1429,7 +1707,17 @@
       "Add cooked rice and soy sauce. Stir until everything is piping hot.",
       "Serve two bowls; tofu or egg may be added and logged separately."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "rice_cooked",
+      "broccoli",
+      "pepper",
+      "carrot",
+      "onion",
+      "soy_sauce",
+      "olive_oil"
+    ]
   },
   {
     "id": "broccoli-soup",
@@ -1471,7 +1759,15 @@
       "Add broccoli and cook until soft. Blend carefully, then stir in milk and heat gently.",
       "Divide into three bowls. Bread is not included."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "broccoli",
+      "potato",
+      "onion",
+      "milk",
+      "olive_oil"
+    ]
   },
   {
     "id": "tomato-egg-skillet",
@@ -1517,7 +1813,16 @@
       "Make wells, add eggs, cover and cook until whites and yolks are fully set.",
       "Divide into two servings. Bread and optional spices are excluded."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "egg",
+      "tomato",
+      "pepper",
+      "onion",
+      "olive_oil",
+      "garlic"
+    ]
   },
   {
     "id": "lemon-fish-rice",
@@ -1556,7 +1861,15 @@
       "Cook raw salmon in oil until it reaches 63°C / 145°F internally.",
       "Finish with lemon juice and serve with rice and broccoli in two portions."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "salmon",
+      "rice_cooked",
+      "broccoli",
+      "lemon",
+      "olive_oil"
+    ]
   },
   {
     "id": "yogurt-fruit-bowl",
@@ -1593,7 +1906,14 @@
       "Divide plain yogurt between two bowls.",
       "Add fruit and chopped almonds. Serve immediately."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "yogurt",
+      "banana",
+      "apple",
+      "almonds"
+    ]
   },
   {
     "id": "apple-oat-porridge",
@@ -1630,7 +1950,14 @@
       "Simmer oats with milk and a splash of water, stirring until soft.",
       "Add apple and cook a few more minutes. Divide into two bowls and top with almonds."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "oats",
+      "milk",
+      "apple",
+      "almonds"
+    ]
   },
   {
     "id": "cucumber-tomato",
@@ -1672,7 +1999,15 @@
       "Whisk lemon juice and olive oil.",
       "Toss vegetables with dressing and divide into two side portions."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "cucumber",
+      "tomato",
+      "onion",
+      "lemon",
+      "olive_oil"
+    ]
   },
   {
     "id": "peanut-chickpea-bowl",
@@ -1722,6 +2057,137 @@
       "Mix peanut butter, soy sauce, lemon and enough water to make a dressing.",
       "Arrange rice, chickpeas and vegetables in two bowls. Drizzle with dressing."
     ],
-    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion."
+    "notes": "Authored simplified home recipe. Weights refer to the catalog raw/cooked form. Optional spices and salt are excluded from nutrition. Bundled photograph is a serving suggestion. Listed optional ingredients are omitted from the pantry estimate when unavailable; no substantial ingredients are silently assumed.",
+    "optionalIngredients": [],
+    "essentialIngredients": [
+      "chickpeas",
+      "rice_cooked",
+      "peanut_butter",
+      "soy_sauce",
+      "lemon",
+      "carrot",
+      "cucumber"
+    ]
+  },
+  {
+    "id": "simple-chicken-rice",
+    "name": "Garlic chicken & rice",
+    "description": "A simple chicken and rice bowl; onion and oil are optional, and water cooking works without them.",
+    "image": "rice",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      {
+        "food": "chicken_raw",
+        "grams": 300
+      },
+      {
+        "food": "rice_cooked",
+        "grams": 350
+      },
+      {
+        "food": "garlic",
+        "grams": 10
+      },
+      {
+        "food": "onion",
+        "grams": 80
+      },
+      {
+        "food": "olive_oil",
+        "grams": 10
+      }
+    ],
+    "essentialIngredients": [
+      "chicken_raw",
+      "rice_cooked",
+      "garlic"
+    ],
+    "optionalIngredients": [
+      "onion",
+      "olive_oil"
+    ],
+    "steps": [
+      "Dice raw chicken and chop garlic. Add sliced onion only if available.",
+      "Cook chicken and garlic in a non-stick covered pan with a little water, adding more water as needed. If oil is available, use the listed amount instead. Cook chicken to 74°C / 165°F.",
+      "Reheat safely stored cooked rice until piping hot, or cook rice first following package directions.",
+      "Divide rice and chicken between two bowls. Rice quantities refer to cooked weight; optional oil/onion are counted only when present."
+    ],
+    "tags": [],
+    "family": "rice",
+    "notes": "Standard edible ingredient weights, not measured pantry quantities. Missing optional ingredients are omitted from nutrition. Water and salt are not calorie-bearing recipe assumptions."
+  },
+  {
+    "id": "banana-pancakes",
+    "name": "Four-ingredient banana pancakes",
+    "description": "A banana, flour, milk and egg batter cooked in a non-stick pan without required oil or sugar.",
+    "image": "pancakes",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "food": "flour",
+        "grams": 100
+      },
+      {
+        "food": "banana",
+        "grams": 180
+      },
+      {
+        "food": "milk",
+        "grams": 150
+      },
+      {
+        "food": "egg",
+        "grams": 100
+      }
+    ],
+    "essentialIngredients": [
+      "flour",
+      "banana",
+      "milk",
+      "egg"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "Mash banana. Whisk in eggs and milk, then stir in flour to form a batter.",
+      "Heat a good non-stick skillet over medium-low heat. Add small spoonfuls of batter; no oil is included in this version.",
+      "Cook both sides until golden and the centers are fully cooked. Divide into two servings.",
+      "If you add oil, butter, syrup or other toppings, log them separately; they are not included in this estimate."
+    ],
+    "tags": [
+      "vegetarian"
+    ],
+    "family": "breakfast",
+    "notes": "Standard edible ingredient weights, not measured pantry quantities. Missing optional ingredients are omitted from nutrition. Water and salt are not calorie-bearing recipe assumptions."
+  },
+  {
+    "id": "plain-rice",
+    "name": "Plain rice bowl",
+    "description": "One straightforward rice option when rice is all you have.",
+    "image": "rice",
+    "minutes": 20,
+    "servings": 1,
+    "ingredients": [
+      {
+        "food": "rice_cooked",
+        "grams": 200
+      }
+    ],
+    "essentialIngredients": [
+      "rice_cooked"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "For dry rice, rinse and cook in water according to the package directions.",
+      "For already cooked rice, reheat safely refrigerated rice until piping hot.",
+      "Serve one bowl, approximately 200 g cooked rice. Water is excluded from calories."
+    ],
+    "tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "family": "side",
+    "notes": "Standard edible ingredient weights, not measured pantry quantities. Missing optional ingredients are omitted from nutrition. Water and salt are not calorie-bearing recipe assumptions."
   }
 ]

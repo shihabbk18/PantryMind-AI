@@ -1,3 +1,23 @@
+# Current intelligence repair validation
+
+4 October 2026. `node --test tests/*.test.mjs`: **37 passed, 0 failed**. Production build validates **53 USDA foods, 43 recipes, 48 serving templates, 40 offline assets**. Syntax check passed for app.mjs.
+
+Pantry regressions cover all six requested cases, strict essential availability, optional omissions, query isolation from saved stock, regional aliases, deterministic nutrition and Small/Medium/Large scaling. Local browser verification changed the typed list to chicken/rice/garlic while four saved potato/egg pantry items remained: ready recommendations were Garlic chicken & rice and Plain rice bowl, with no potato/egg contamination.
+
+Actual local CLIP burger inference returned Burger at rounded 72% with automatic 540 kcal, 39.3 g protein, 34.0 g carbs, 26.9 g fat. Every ingredient row displayed Recipe assumption; oil was not represented as visually measured. Large produced 810 kcal and Small 270 kcal automatically. These are template estimates, not nutrition ground truth or measured portion sizes.
+
+Additional actual local inference: Pizza led at rounded 64%, calculating 444 kcal, 17.2 g protein, 53.0 g carbs and 17.7 g fat. Plain rice led at 37%, calculating 260 kcal, 5.4 g protein, 56.3 g carbs and 0.6 g fat. Scores are vocabulary-relative, not calibrated probabilities; changed prompts are not an accuracy benchmark.
+
+Automated pantry cases: A returns potato omelette, potato/egg skillet and aloo bhorta as ready; egg-potato tomato stew is separately almost possible with tomato missing. B returns garlic chicken/rice and plain rice; absent oil is an omitted optional in the garlic recipe. C returns four-ingredient banana pancakes only. D returns plain rice only. E returns nothing. F replaces matching stock with chicken/rice/garlic while leaving saved pantry untouched. Names alone cannot guarantee enough actual stock: all cooking amounts remain standard serving assumptions.
+
+Photographs: 17 licensed local assets, including actual banana pancakes and a credited potato omelette; photos remain serving illustrations and can differ from a recipe's optional garnishes. No paid image generation was introduced. All 43 recipes have validated essential/optional metadata and usable licensed image references.
+
+A real tiger photograph produced a non-food warning and blank nutrition. Local browser pantry query flour/banana/milk/egg returned only four-ingredient banana pancakes (379 kcal per serving), despite unrelated saved stock. Public deployment verification is recorded after publication.
+
+---
+
+## Historical version 2.0 validation (superseded recommendation behavior)
+
 # PantryMind Web 2.0 validation
 
 4 October 2026. Targeted changes preserve the static JavaScript architecture, USDA catalog, original UI, IndexedDB records, PWA and GitHub Pages workflow. No backend, paid API or Android project was added.

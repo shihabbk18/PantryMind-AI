@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
-import {calculateNutrition,rankRecipes,recipeNutrition,parsePantryQuantity} from '../web/core.mjs';
+import {calculateNutrition,rankRecipes,recipeNutrition,recipeMatch,parsePantryQuantity} from '../web/core.mjs';
 const data=JSON.parse(readFileSync(new URL('../web/data/nutrition.json',import.meta.url),'utf8'));
 const foods=new Map(data.ingredients.map(f=>[f.id,f]));
 const recipes=JSON.parse(readFileSync(new URL('../web/data/recipes.json',import.meta.url),'utf8'));
@@ -27,8 +27,8 @@ test('raw and cooked records remain distinct',()=>{
  assert.notEqual(foods.get('rice_dry').kcal,foods.get('rice_cooked').kcal);
  near(calculateNutrition([{food:'rice_dry',grams:100}],foods).total.kcal,365);
 });
-test('50 source-backed records cover every recipe ingredient',()=>{
- assert.equal(foods.size,50);assert.match(data.source,/USDA/);
+test('53 source-backed records cover every recipe ingredient',()=>{
+ assert.equal(foods.size,53);assert.match(data.source,/USDA/);
  for(const f of foods.values())assert.ok(Number.isInteger(f.fdc_id)&&f.source_description);
  for(const r of recipes){assert.ok(r.ingredients.every(p=>foods.has(p.food)));assert.ok(recipeNutrition(r,foods).kcal>0);assert.ok(existsSync(new URL(`../web/images/${r.image}.jpg`,import.meta.url)));}
 });
@@ -37,14 +37,14 @@ test('complete stock gives full quantity coverage',()=>{
  assert.equal(results[0].recipe.id,r.id);near(results[0].coverage,1);assert.deepEqual(results[0].missing,[]);
 });
 test('insufficient quantities explicitly include present-but-short items',()=>{
- const r=recipes[0],[result]=rankRecipes([r],[{food:'rice_cooked',grams:100}],foods);
+ const r=recipes[0],result=recipeMatch(r,[{food:'rice_cooked',grams:100}],foods);assert.equal(result.ready,false);assert.deepEqual(rankRecipes([r],[{food:'rice_cooked',grams:100}],foods),[]);
  near(result.missing.find(p=>p.food==='rice_cooked').grams,250);
  near(result.missing.find(p=>p.food==='egg').grams,100);
  assert.ok(result.coverage>0&&result.coverage<1);assert.deepEqual(rankRecipes(recipes,[],foods),[]);
 });
 test('duplicate rows are aggregated for matching',()=>{
- const r={...recipes[0],ingredients:[{food:'egg',grams:50},{food:'egg',grams:50}]};
- const [result]=rankRecipes([r],[{food:'egg',grams:30},{food:'egg',grams:20}],foods);
+ const r={...recipes[0],ingredients:[{food:'egg',grams:50},{food:'egg',grams:50}],essentialIngredients:['egg'],optionalIngredients:[]};
+ const result=recipeMatch(r,[{food:'egg',grams:30},{food:'egg',grams:20}],foods);assert.equal(result.ready,false);
  near(result.coverage,.5);near(result.missing[0].grams,50);
 });
 test('diet and calorie preferences filter actual computed macros',()=>{

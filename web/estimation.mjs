@@ -57,7 +57,7 @@ export function estimateDish(label, scale=1) {
  const template=dishes[text]||Object.values(dishes).find(d=>d.name.toLowerCase()===text)||dishes[aliases[key]||key];
  if(!template)throw new Error(`Recognized ${String(label).replaceAll('_',' ')}, but no reliable ingredient template is available. Add ingredients manually; no nutrition values have been invented.`);
  if(!Number.isFinite(scale)||scale<=0||scale>4)throw new Error('Choose a valid serving size.');
- return {...template,ingredients:template.ingredients.map(p=>({...p,grams:Math.round(p.grams*scale*10)/10})),scale};
+ return {...template,visualEvidence:'Dish-level image classification only; individual ingredients have not been visually detected.',ingredientBasis:'Typical recipe composition, not ingredient measurements',ingredients:template.ingredients.map(p=>({...p,source:'template',grams:Math.round(p.grams*scale*10)/10})),scale};
 }
 export function dishCatalog(){return Object.entries(dishes).map(([label,d])=>({label,name:d.name,note:d.note,ingredients:d.ingredients.map(p=>({...p}))}));}
 export function choosePrediction(predictions) {

@@ -44,3 +44,7 @@ Application code, icons, and original recipe templates use the root MIT LICENSE.
 Ingredient/portion heuristics and recipe assumptions are original project code/data and are not measurements produced by the classifier.
 
 The burger photograph visible in the documentation screenshot is [Unsplash photo-1568901346375-23c9450c58cd](https://images.unsplash.com/photo-1568901346375-23c9450c58cd), also under the Unsplash License. It was used as an actual recognition test image.
+
+### Added potato omelette photograph
+
+[Spanish Potato Omelet by Joy (joyosity)](https://commons.wikimedia.org/wiki/File:Tortilla_Espa%C3%B1ola_(Spanish_Potato_Omelet).jpg), licensed [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/). Bundled unmodified as `web/images/spanish-omelette.jpg`; CSS may crop its display. Photographer endorsement is not implied. Other photographs retain the Unsplash License. Full credits are in `web/data/photo-credits.json`.

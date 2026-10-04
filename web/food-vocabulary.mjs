@@ -4,16 +4,16 @@ export const FOOD_LABELS=[
  ['pizza','Pizza','pizza with cheese and tomato sauce'],
  ['plain_rice','Plain rice','a bowl of plain cooked white rice'],
  ['fried_rice','Fried rice','fried rice with eggs and vegetables'],
- ['biryani','Chicken biryani','Bangladeshi chicken biryani with spiced rice and chicken'],
- ['khichuri','Khichuri','Bangladeshi khichuri, soft yellow rice cooked with lentils'],
+ ['biryani','Chicken biryani','biryani, a mound of yellow and white long-grain spiced rice with chicken pieces'],
+ ['khichuri','Khichuri','khichuri or khichdi, thick soft yellow rice and lentil porridge in a bowl'],
  ['dal','Dal','a bowl of yellow lentil dal soup'],
- ['chicken_curry','Rice with chicken curry','chicken curry served with rice'],
- ['chicken_curry_only','Chicken curry','a bowl of chicken curry without rice'],
+ ['chicken_curry','Rice with chicken curry','a meal plate with a portion of white rice beside chicken pieces in curry gravy'],
+ ['chicken_curry_only','Chicken curry','chicken pieces in orange or brown curry gravy in a bowl'],
  ['vegetable_curry','Vegetable curry','a bowl of vegetable curry with potatoes and vegetables'],
  ['beef_curry','Beef curry','a bowl of Bangladeshi beef curry'],
- ['fish_curry','Fish curry','Bengali fish curry with tomato gravy'],
+ ['fish_curry','Fish curry','fish steaks or fillets in reddish curry gravy in a bowl'],
  ['egg_curry','Egg curry','boiled eggs in curry sauce'],
- ['mixed_meal','Mixed rice plate','a mixed meal plate with rice, curry, lentils and vegetables'],
+ ['mixed_meal','Mixed rice plate','a mixed dinner plate with separate portions of rice, meat curry, lentil dal and cooked vegetables'],
  ['club_sandwich','Chicken sandwich','a chicken sandwich with bread and lettuce'],
  ['grilled_cheese_sandwich','Cheese sandwich','a toasted grilled cheese sandwich'],
  ['pasta','Tomato pasta','pasta with red tomato sauce'],
@@ -58,6 +58,7 @@ export const NONFOOD_LABELS=[
  ['nonfood_object','Household object','a household object such as a shoe bag or bottle']
 ].map(([label,name,description])=>({label,name,description,kind:'nonfood'}));
 export const IMAGE_LABELS=[...FOOD_LABELS,...NONFOOD_LABELS];
+const families={plain_rice:'rice',fried_rice:'rice',biryani:'rice',khichuri:'rice',chicken_curry:'rice',mixed_meal:'rice',bibimbap:'rice',risotto:'rice',pasta:'pasta',spaghetti_bolognese:'pasta',spaghetti_carbonara:'pasta',macaroni_and_cheese:'pasta',omelette:'egg',scrambled_eggs:'egg',fried_egg:'egg'};
 // Heuristic policy, not calibrated probabilities or an accuracy guarantee.
 export function assessPredictions(predictions){
  if(!Array.isArray(predictions)||!predictions.length||predictions.some(p=>!p.label||!Number.isFinite(p.score)||p.score<0||p.score>1))throw new Error('The image model returned invalid predictions. Try again or search for a dish.');
@@ -65,6 +66,8 @@ export function assessPredictions(predictions){
  const nonfood=sorted.filter(p=>p.kind==='nonfood').reduce((sum,p)=>sum+p.score,0);
  if(first.kind==='nonfood'||nonfood>.5)return {status:'nonfood',predictions:sorted.slice(0,3),message:'This looks like a non-food image. No nutrition was calculated. Choose a food photo, or search for a dish manually.'};
  const margin=first.score-(sorted[1]?.score||0);
+ const foodMass=sorted.filter(p=>p.kind==='food').reduce((sum,p)=>sum+p.score,0),second=sorted[1];
+ if(first.score>=.15&&margin<.012&&foodMass>=.75&&families[first.label]&&families[first.label]===families[second?.label])return {status:'selected',best:first,provisional:true,predictions:sorted.filter(p=>p.kind==='food').slice(0,3)};
  if(first.score<.08||margin<.012)return {status:'uncertain',predictions:sorted.filter(p=>p.kind==='food').slice(0,3),message:'Unknown Food: the leading guesses are too close or weak. Choose a plausible prediction below or search for a dish. No automatic nutrition has been calculated.'};
  return {status:'selected',best:first,predictions:sorted.filter(p=>p.kind==='food').slice(0,3)};
 }

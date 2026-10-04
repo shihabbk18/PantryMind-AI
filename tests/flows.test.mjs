@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {estimateDish,choosePrediction} from '../web/estimation.mjs';
-import {parseIngredientNames,rankRecipes,calculateNutrition} from '../web/core.mjs';
+import {parseIngredientNames,rankRecipes,recipeMatch,calculateNutrition} from '../web/core.mjs';
 const foods=new Map(JSON.parse(readFileSync(new URL('../web/data/nutrition.json',import.meta.url))).ingredients.map(f=>[f.id,f]));
 const recipes=JSON.parse(readFileSync(new URL('../web/data/recipes.json',import.meta.url)));
 test('burger and pizza estimates compute from explicit catalog ingredients',()=>{
@@ -38,7 +38,7 @@ test('pantry aliases, duplicates, mixed quantities and unsupported names handled
  assert.throws(()=>parseIngredientNames('egg, mystery-food',foods),/mystery-food/);
  assert.throws(()=>parseIngredientNames('',foods),/at least one/);
  const r=recipes.find(r=>r.id==='spanish-omelette');
- const [idea]=rankRecipes([r],[{food:'egg',grams:null},{food:'potato',grams:10}],foods);
+ const idea=recipeMatch(r,[{food:'egg',grams:null},{food:'potato',grams:10}],foods);assert.equal(idea.ready,false);
  assert.ok(idea.missing.some(p=>p.food==='potato'&&p.grams===290));
  assert.ok(!idea.missing.some(p=>p.food==='egg'));
 });
@@ -49,10 +49,10 @@ test('recipe pictures and all nutrition values remain source-based',()=>{
  assert.ok(!source.includes('placeholder="Leave blank for names only" required'));
 });
 test('raw names-only stock can be cooked; measured raw amounts are not converted silently',()=>{
- const recipe={...recipes[0],ingredients:[{food:'chicken_cooked',grams:100}]};
+ const recipe={...recipes[0],ingredients:[{food:'chicken_cooked',grams:100}],essentialIngredients:['chicken_cooked'],optionalIngredients:[]};
  const [idea]=rankRecipes([recipe],parseIngredientNames('chicken',foods),foods);
  assert.equal(idea.coverage,1);assert.deepEqual(idea.missing,[]);
  assert.deepEqual(rankRecipes([recipe],[{food:'chicken_raw',grams:200}],foods),[]);
- const eggRecipe={...recipes[0],ingredients:[{food:'egg',grams:100}]};
+ const eggRecipe={...recipes[0],ingredients:[{food:'egg',grams:100}],essentialIngredients:['egg'],optionalIngredients:[]};
  assert.deepEqual(rankRecipes([eggRecipe],[{food:'egg_boiled',grams:null}],foods),[]);
 });

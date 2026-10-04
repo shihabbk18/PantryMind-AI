@@ -58,6 +58,9 @@ CATALOG = [
 ('beef','Ground beef, 90% lean, raw','Beef, ground, 90% lean meat / 10% fat, raw'),
 ('soy_sauce','Soy sauce','Soy sauce made from soy and wheat (shoyu)'),
 ('salt','Table salt','Salt, table'),
+('cilantro','Coriander / cilantro leaves, raw','Coriander (cilantro) leaves, raw'),
+('eggplant','Eggplant / brinjal, raw','Eggplant, raw'),
+('chili','Red chili / chilli, raw','Peppers, hot chili, red, raw'),
 ]
 
 

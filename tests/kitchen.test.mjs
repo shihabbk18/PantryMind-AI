@@ -24,10 +24,10 @@ test('ambiguous scores return Unknown Food, clear leaders return their actual la
  const result=assessPredictions([prediction('hamburger',.1),prediction('pizza',.8)]);assert.equal(result.best.label,'pizza');assert.equal(result.predictions[0].label,'pizza');
  for(const bad of [[],null,[prediction('pizza',NaN)],[prediction('pizza',-1)]])assert.throws(()=>assessPredictions(bad),/invalid predictions/);
 });
-test('40 authored recipes use licensed local photographs and valid structured nutrition',()=>{
- assert.equal(recipes.length,40);assert.equal(new Set(recipes.map(r=>r.id)).size,40);
+test('43 authored recipes use licensed local photographs and valid structured nutrition',()=>{
+ assert.equal(recipes.length,43);assert.equal(new Set(recipes.map(r=>r.id)).size,43);
  const credits=JSON.parse(readFileSync(new URL('../web/data/photo-credits.json',import.meta.url)));
- for(const recipe of recipes){assert.ok(recipe.minutes>0&&recipe.steps.length>=3&&recipe.description&&recipe.family&&recipe.notes);assert.ok(existsSync(new URL(`../web/images/${recipe.image}.jpg`,import.meta.url)));assert.ok(credits.some(c=>c.file===`images/${recipe.image}.jpg`&&c.license==='Unsplash License'));const m=recipeNutrition(recipe,foods);assert.ok(Object.values(m).every(v=>Number.isFinite(v)&&v>=0));}
+ for(const recipe of recipes){assert.ok(recipe.minutes>0&&recipe.steps.length>=3&&recipe.description&&recipe.family&&recipe.notes);assert.ok(existsSync(new URL(`../web/images/${recipe.image}.jpg`,import.meta.url)));assert.ok(credits.some(c=>c.file===`images/${recipe.image}.jpg`&&['Unsplash License','CC BY 2.0'].includes(c.license)&&c.license_url));const m=recipeNutrition(recipe,foods);assert.ok(Object.values(m).every(v=>Number.isFinite(v)&&v>=0));}
 });
 test('diverse names-only ideas are reproducible and keep dietary/calorie filters',()=>{
  const matches=rankRecipes(recipes,pantry,foods,{limit:40});const a=variedRecommendations(matches);assert.deepEqual(a,variedRecommendations(matches));assert.equal(a.length,3);assert.equal(new Set(a.map(m=>m.recipe.family)).size,3);assert.ok(a.every(m=>m.coverage>0));
